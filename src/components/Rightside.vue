@@ -12,9 +12,9 @@ export default {
 
 <style scoped>
 .ask-question {
-    background-color: #fff;
-    padding: 10px 1px;
-    border-bottom: 2px solid var(--bottom-separator-color);
+  background-color: #fff;
+  padding: 10px 1px;
+  border-bottom: 2px solid var(--bottom-separator-color);
 }
 
 .btn {
