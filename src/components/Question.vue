@@ -3,15 +3,38 @@
     <div class="row">
       <div class="col-md-2">
         <div
-          class="user-img d-flex align-items-center justify-content-lg-center"
+          class="user-img d-flex align-items-center justify-content-lg-center position-relative"
         >
           <img src="../assets/images/userImg.jpg" alt="" />
+          <div
+            class="user-popup position-absolute bg-white p-3 text-center rounded-1"
+          >
+            <div>
+              <img src="../assets/images/userImg.jpg" alt="" />
+            </div>
+            <h3>Martin Hope</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> <span>Damita, Egypt</span>
+            </p>
+            <div>
+              <ul class="rounded-1">
+                <li><i class="fas fa-book-open pe-2"></i> Questions</li>
+                <li>
+                  <i class="fas fa-comment-alt fa-flip-horizontal ps-2"></i>
+                  Answers
+                </li>
+                <li><i class="fas fa-graduation-cap pe-2"></i> Best Answers</li>
+                <li><i class="fab fa-bitbucket pe-2"></i> Points</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary form-control">View Profile</button>
+          </div>
         </div>
         <div class="vote d-flex align-items-center justify-content-center">
           <div>
-            <span><i class="fas fa-sort-up"></i></span>
-            <p class="mb-0">0</p>
-            <span><i class="fas fa-sort-down"></i></span>
+            <span @click="addCounter"><i class="fas fa-sort-up"></i></span>
+            <p class="mb-0 counter-wrapper"><input type="text" name="" v-model="counter" id="" readonly></p>
+            <span @click="decreaseCounter"><i class="fas fa-sort-down"></i></span>
           </div>
         </div>
       </div>
@@ -50,7 +73,9 @@
                 ><i class="fas fa-comment-alt fa-flip-horizontal me-2"></i> 4
                 Answers</span
               >
-              <span class="views"><i class="fas fa-eye me-2"></i> 9K Views</span>
+              <span class="views"
+                ><i class="fas fa-eye me-2"></i> 9K Views</span
+              >
             </div>
             <div><button class="btn btn-dark">Answer</button></div>
           </div>
@@ -63,6 +88,19 @@
 <script>
 export default {
   name: "Question",
+  data() {
+    return {
+      counter: 0,
+    }
+  },
+  methods: {
+    addCounter() {
+      return this.counter++;
+    },
+    decreaseCounter() {
+      return this.counter--;
+    }
+  }
 };
 </script>
 
@@ -104,6 +142,7 @@ export default {
   border-radius: 50%;
   border: 2px solid blue;
   padding: 3px;
+  cursor: pointer;
 }
 
 .tags span,
@@ -149,6 +188,15 @@ export default {
   cursor: pointer;
 }
 
+.vote .counter-wrapper input {
+  border: none;
+  width: 40px;
+}
+
+.vote .counter-wrapper input:focus {
+  outline: none;
+}
+
 /* Related hovering */
 .user-asked h5 {
   transition: 1s;
@@ -170,4 +218,38 @@ export default {
   background-color: blue;
   border-color: blue !important;
 }
+
+.user-img:hover .user-popup {
+  /* opacity: 1; */
+  display: block;
+}
+
+/* User Popup */
+.user-popup {
+  z-index: 100;
+  top: 100%;
+  width: 300px;
+  display: none;
+  /* opacity: 0; */
+  transition: 0.5s;
+}
+
+.user-popup h3 {
+  font-size: 17px;
+  padding-top: 10px;
+}
+
+.user-popup ul {
+  list-style: none;
+  background-color: var(--profile-bg);
+  padding: 10px;
+  text-align: start !important;
+  font-size: 12px;
+}
+
+.user-popup img {
+  width: 30%;
+}
+
+
 </style>
