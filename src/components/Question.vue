@@ -33,8 +33,12 @@
         <div class="vote d-flex align-items-center justify-content-center">
           <div>
             <span @click="addCounter"><i class="fas fa-sort-up"></i></span>
-            <p class="mb-0 counter-wrapper"><input type="text" name="" v-model="counter" id="" readonly></p>
-            <span @click="decreaseCounter"><i class="fas fa-sort-down"></i></span>
+            <p class="mb-0 counter-wrapper">
+              <input type="text" name="" v-model="counter" id="" readonly />
+            </p>
+            <span @click="decreaseCounter"
+              ><i class="fas fa-sort-down"></i
+            ></span>
           </div>
         </div>
       </div>
@@ -91,7 +95,7 @@ export default {
   data() {
     return {
       counter: 0,
-    }
+    };
   },
   methods: {
     addCounter() {
@@ -99,8 +103,8 @@ export default {
     },
     decreaseCounter() {
       return this.counter--;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -250,6 +254,4 @@ export default {
 .user-popup img {
   width: 30%;
 }
-
-
 </style>

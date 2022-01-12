@@ -3,7 +3,9 @@
   <div class="container">
     <div class="row">
       <!-- Left -->
-      <div class="col-md-2 offset-1">Left side</div>
+      <div class="col-md-2 offset-1">
+        <Leftside />
+      </div>
       <!-- Middle -->
       <div class="col-md-6">
         <Home />
@@ -22,6 +24,7 @@ import Navbar from "./components/Navbar.vue";
 import Rightside from "./components/Rightside.vue";
 import Questionsinsights from "./components/Questionsinsights.vue";
 import Home from "./components/Home.vue";
+import Leftside from "./components/Leftside.vue";
 
 export default {
   name: "App",
@@ -30,6 +33,7 @@ export default {
     Rightside,
     Questionsinsights,
     Home,
+    Leftside,
   },
 };
 </script>
