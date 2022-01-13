@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-2">
         <div
-          class="user-img d-flex align-items-center justify-content-lg-center position-relative"
+          class="user-img d-flex align-items-center justify-content-center position-relative"
         >
           <img src="../assets/images/userImg.jpg" alt="" />
           <div

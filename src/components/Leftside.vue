@@ -31,6 +31,10 @@ export default {
 </script>
 
 <style scoped>
+/* div {
+  top: 5%;
+} */
+
 ul {
   list-style: none;
   line-height: 2.5;
@@ -38,11 +42,11 @@ ul {
 }
 
 ul li {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .inner-ul {
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .inner-ul li {
@@ -53,10 +57,10 @@ ul li {
 }
 
 ul li:hover {
-    color: blue;
+  color: blue;
 }
 
 .inner-ul li:hover {
-    color: #000;
+  color: #000;
 }
 </style>

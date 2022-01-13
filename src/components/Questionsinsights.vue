@@ -17,6 +17,62 @@
       <h3>12</h3>
     </div>
   </div>
+  <section class="">
+    <div>
+      <button class="btn">Popular</button>
+      <button class="btn">Answers</button>
+    </div>
+    <div class="row bg-light p-2">
+      <div class="col-md-2">
+        <div class="d-flex align-items-center justify-content-center">
+          <img src="../assets/images/userImg.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div>
+          <h4>How to approach applying for a job at a company ...</h4>
+          <span
+            ><i class="fas fa-comment-alt fa-flip-horizontal"></i> 7
+            Answers</span
+          >
+        </div>
+      </div>
+      <hr class="mt-4" />
+    </div>
+    <div class="row bg-light p-2">
+      <div class="col-md-2">
+        <div class="d-flex align-items-center justify-content-center">
+          <img src="../assets/images/userImg.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div>
+          <h4>How to approach applying for a job at a company ...</h4>
+          <span
+            ><i class="fas fa-comment-alt fa-flip-horizontal"></i> 7
+            Answers</span
+          >
+        </div>
+      </div>
+      <hr class="mt-4" />
+    </div>
+    <div class="row bg-light p-2">
+      <div class="col-md-2">
+        <div class="d-flex align-items-center justify-content-center">
+          <img src="../assets/images/userImg.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div>
+          <h4>How to approach applying for a job at a company ...</h4>
+          <span
+            ><i class="fas fa-comment-alt fa-flip-horizontal"></i> 7
+            Answers</span
+          >
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -26,6 +82,7 @@ export default {
 </script>
 
 <style scoped>
+/* Insights */
 .parent {
   display: flex;
   align-items: center;
@@ -101,5 +158,33 @@ export default {
   background-color: blue;
   right: 0px;
   top: 20px;
+}
+
+/* Section */
+section img {
+  border-radius: 50%;
+  width: 220%;
+}
+
+section h4 {
+  font-size: 12px;
+}
+
+section span {
+  font-size: 12px;
+  color: var(--paragraph-color);
+}
+
+section span i {
+  padding-left: 15px;
+}
+
+/* Btn */
+.btn {
+  background-color: var(--profile-bg) !important;
+  border: 1px solid #ddd;
+  border-radius: 1px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 </style>
