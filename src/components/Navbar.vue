@@ -100,6 +100,7 @@ export default {
   font-weight: bold;
   transition: 0.5s;
   margin-right: 0.5rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav-link:hover {
@@ -123,6 +124,8 @@ export default {
 .nav-search::placeholder {
   font-size: 12px;
   padding-left: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
 }
 
 .nav-search:focus {
@@ -145,6 +148,7 @@ export default {
   padding: 3px 25px;
   color: var(--white-text);
   border: none;
+  font-family: "Roboto", sans-serif;
   transition: 0.5s;
 }
 

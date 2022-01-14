@@ -1,5 +1,6 @@
 <template>
   <Navbar />
+  <createnewaccount />
   <!-- <div class="container"> -->
   <!-- <div class="row g-0"> -->
   <!-- Left -->
@@ -24,6 +25,7 @@
 </template>
 
 <script>
+import Createnewaccount from "./components/Createnewaccount.vue";
 import Navbar from "./components/Navbar.vue";
 // import Rightside from "./components/Rightside.vue";
 // import Home from "./components/Home.vue";
@@ -43,6 +45,7 @@ export default {
     // Questionsinsights,
     // Relatedquestions,
     Upbutton,
+    Createnewaccount,
     // Footer,
   },
 };
@@ -50,6 +53,8 @@ export default {
 
 <style>
 @import "./assets/css/variables.css";
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap");
+
 body {
   background-color: var(--main-bg-color);
 }
