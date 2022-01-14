@@ -1,10 +1,27 @@
 :root {
     --main-nav-ng-color: #272930;
     --active-nav-bg-color: #1A1C21;
-    --main-bg-color: #F2F2F2;
     --bottom-separator-color: #e1e3e3;
     --profile-bg: #f5f5f5;
     --paragraph-color: #7c7f85;
     --footer-bg-color: #212328;
-    --SM-bg-icons: #282b32;
+    
+    --main-bg-color: #F2F2F2;
+    --SM-bg-icons: #282B32;
+    --footer-bg-question: #F5F5F5;
+    --questions-bg-widget: #F9F9F9;
+    --white-bg: #FFF;
+    --dark-bg: #000;
+    --separator-color: #E1E3E3;
+    --badge-bg: #D9A34A;
+    --widget-green-color: #1FAE5B;
+    --widget-red-color: #F05555;
+    --verified-bg-color: #5890FF;
+    --btn-bg-gray: #7C7F85;
+    --navbar-bg: #272930;
+    --footer-bg: #1A1C21;
+    --main-blue-bg-text-color: #2D6FF7;
+
+    --white-text: #FFF;
+    --dark-text: #000;
 }

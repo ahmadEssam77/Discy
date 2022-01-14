@@ -1,14 +1,19 @@
 <template>
   <div class="nav-wrapper">
     <div class="container">
-      <div class="row">
-        <!-- Logo -->
+      <div class="row position-relative">
+        <!-- Logo 2 col-->
         <div
-          class="col-md-2 offset-1 d-flex align-items-center justify-content-start"
+          class="col-md-2 d-flex align-items-center justify-content-start main-logo"
         >
-          <img src="../assets/images/logo.png" alt="Logo" />
+          <div class="">
+            <a href="#">
+              <img src="../assets/images/logo.png" alt="Logo" />
+            </a>
+          </div>
         </div>
-        <div class="col-md-6 middle">
+        <!-- Navbar and search 7 col -->
+        <div class="col-md-7 middle">
           <!-- Navbar bootstrap component -->
           <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
@@ -26,7 +31,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
+                    <a class="nav-link my-active" aria-current="page" href="#"
                       >Home</a
                     >
                   </li>
@@ -40,25 +45,27 @@
                     <a class="nav-link" href="#">Contact Us</a>
                   </li>
                 </ul>
-                <form class="d-flex">
+                <form class="d-flex position-relative">
                   <input
-                    class="form-control me-2 nav-search"
+                    class="form-control nav-search"
                     type="search"
                     placeholder="Type Search Words"
                     aria-label="Search"
                   />
+                  <i class="fas fa-search icon-search"></i>
                 </form>
               </div>
             </div>
           </nav>
         </div>
-        <!-- Login -->
-        <div
-          class="col-md-2 d-flex align-items-center justify-content-center login"
-        >
-          <div class="d-flex align-items-center justify-content-center">
-            <button class="btn btn-primary me-3">Sign In</button>
-            <button class="btn btn-secondary">Sign Up</button>
+        <!-- Login 3 col-->
+        <div class="col-md-3 d-flex align-items-center lock-wrapper">
+          <div class="login">
+            <button class="my-btn in">Sign In</button>
+            <button class="my-btn up">Sign Up</button>
+          </div>
+          <div class="lock">
+            <i class="fas fa-lock"></i>
           </div>
         </div>
       </div>
@@ -73,52 +80,127 @@ export default {
 </script>
 
 <style scoped>
+/* Nav Wrapper */
 .nav-wrapper {
-  background-color: var(--main-nav-ng-color);
+  background-color: var(--navbar-bg);
+  padding: 17px 0;
 }
 
-.row div {
-  padding: 5px 0;
-}
-
-/* Middle section in nav */
+/* Middle section in navbar */
 .middle {
-  padding-right: 5px;
-  padding-left: 5px;
   border-left: 1px solid #33353c;
   border-right: 1px solid #33353c;
 }
 
 .nav-link {
-  color: #fff !important;
+  color: var(--white-text) !important;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.5s;
+  margin-right: 0.5rem;
 }
 
-.active {
-  background-color: var(--active-nav-bg-color);
-  color: #fff;
+.nav-link:hover {
+  background-color: var(--footer-bg);
+}
+
+.my-active {
+  background-color: var(--footer-bg);
 }
 
 .nav-search {
-  background-color: var(--active-nav-bg-color);
-  padding: 5px;
+  background-color: #202228;
+  padding: 7px;
   outline: none;
-  border: 1px solid var(--active-nav-bg-color);
-  border-radius: 2px;
+  border: none;
+  border-radius: 3px;
+  width: 220px;
+  font-size: 12px;
+}
+
+.nav-search::placeholder {
+  font-size: 12px;
+  padding-left: 7px;
 }
 
 .nav-search:focus {
-  color: yellow;
+  color: #7c7f85;
   outline: none;
   box-shadow: none !important;
 }
 
-/* Login section in nav */
-.login {
-  border-right: 1px solid #33353c;
+.icon-search {
+  position: absolute;
+  color: var(--white-text);
+  right: 12px;
+  top: 8px;
 }
 
-.btn {
-  padding: 3px 20px !important;
-  border-radius: 3px !important;
+/* Buttons - Login */
+.my-btn {
+  border-radius: 2px;
+  margin-right: 15px;
+  padding: 3px 25px;
+  color: var(--white-text);
+  border: none;
+  transition: 0.5s;
+}
+
+.my-btn:hover {
+  background-color: var(--widget-red-color);
+}
+
+.in {
+  background-color: var(--main-blue-bg-text-color);
+}
+
+.up {
+  background-color: var(--btn-bg-gray);
+}
+
+.lock {
+  color: var(--white-text);
+  cursor: pointer;
+  display: none;
+}
+
+/* Media Query */
+@media screen and (max-width: 800px) {
+  .main-logo {
+    width: 50%;
+    position: absolute;
+    left: 30%;
+  }
+
+  .middle {
+    width: 15%;
+    border: none;
+    position: relative;
+    left: -5%;
+  }
+
+  .lock-wrapper {
+    width: 15%;
+  }
+
+  .login {
+    display: none !important;
+  }
+
+  .lock {
+    display: block !important;
+    position: absolute;
+    right: 5%;
+  }
+
+  .lock:hover {
+    color: var(--main-blue-bg-text-color);
+  }
+
+  .navbar button {
+    border: none;
+  }
 }
 </style>
