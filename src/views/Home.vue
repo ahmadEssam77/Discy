@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Question from "./Question.vue";
+import Question from "../components/Question.vue";
 
 export default {
   name: "Home",

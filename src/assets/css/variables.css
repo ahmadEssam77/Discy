@@ -18,10 +18,15 @@
     --widget-red-color: #F05555;
     --verified-bg-color: #5890FF;
     --btn-bg-gray: #7C7F85;
+
     --navbar-bg: #272930;
     --footer-bg: #1A1C21;
     --main-blue-bg-text-color: #2D6FF7;
+    --ancor-color: #26333B;
 
     --white-text: #FFF;
     --dark-text: #000;
+
+    --roboto-font-family: "Roboto", sans-serif;
+    --arial-font-family: Arial, Helvetica, sans-serif;
 }

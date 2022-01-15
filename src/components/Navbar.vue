@@ -100,7 +100,7 @@ export default {
   font-weight: bold;
   transition: 0.5s;
   margin-right: 0.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--roboto-font-family);
 }
 
 .nav-link:hover {
@@ -124,7 +124,7 @@ export default {
 .nav-search::placeholder {
   font-size: 12px;
   padding-left: 7px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--arial-font-family);
   font-style: italic;
 }
 
@@ -148,7 +148,7 @@ export default {
   padding: 3px 25px;
   color: var(--white-text);
   border: none;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--roboto-font-family);
   transition: 0.5s;
 }
 

@@ -2,10 +2,10 @@
   <div class="p-5 create-account">
     <div class="add-search d-flex align-items-center justify-content-between">
       <div class="left-search">
-        <a><i class="fas fa-search icon-search"></i> Search</a>
+        <a href="#"><i class="fas fa-search icon-search"></i> Search</a>
       </div>
       <div class="right-question">
-        <a><i class="fas fa-question-circle"></i> Ask A Question</a>
+        <a href="#"><i class="fas fa-question-circle"></i> Ask A Question</a>
       </div>
     </div>
     <div
@@ -42,7 +42,7 @@ export default {
 
 .left,
 .right {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--roboto-font-family);
 }
 
 h3 {
@@ -101,8 +101,14 @@ button:hover {
   }
 
   .add-search a {
-      font-size: 14px;
-      font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-family: var(--roboto-font-family);
+    color: var(--navbar-bg);
+    text-decoration: none;
+  }
+
+  .add-search a:hover {
+    color: var(--main-blue-bg-text-color);
   }
 }
 </style>
