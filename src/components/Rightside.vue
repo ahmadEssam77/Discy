@@ -9,15 +9,15 @@
 
 <script>
 import Questionsinsights from "./Questionsinsights.vue";
-import Trendingtags from "./Trendingtags.vue";
 import Topmembers from "./Topmembers.vue";
+import Trendingtags from "./Trendingtags.vue";
 
 export default {
   name: "Rightside",
   components: {
-    Trendingtags,
     Questionsinsights,
     Topmembers,
+    Trendingtags,
   },
 };
 </script>

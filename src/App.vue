@@ -9,13 +9,11 @@
       </div>
       <!-- Middle -->
       <div class="col-md-7">
-        <!-- <Home /> -->
         <router-view></router-view>
       </div>
       <!-- Right -->
       <div class="col-md-3">
         <Rightside />
-        <!-- <Relatedquestions /> -->
       </div>
     </div>
   </div>

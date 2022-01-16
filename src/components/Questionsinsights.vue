@@ -19,19 +19,15 @@
       </div>
       <section class="buttons">
         <button class="popular-btn">Popular</button>
-        <button>Answer</button>
+        <button class="answer-btn">Answer</button>
       </section>
     </div>
   </div>
 
-  <!-- <section class="">
-    <div>
-      <button class="btn">Popular</button>
-      <button class="btn">Answers</button>
-    </div>
-    <div class="row bg-light p-2">
-      <div class="col-md-2">
-        <div class="d-flex align-items-center justify-content-center">
+  <section class="test">
+    <div class="row p-2 pt-3">
+      <div class="col-md-2 p-3">
+        <div class="d-flex align-items-center justify-content-center adjust-img">
           <img src="../assets/images/userImg.jpg" alt="" />
         </div>
       </div>
@@ -44,11 +40,11 @@
           >
         </div>
       </div>
-      <hr class="mt-4" />
+      <hr>
     </div>
-    <div class="row bg-light p-2">
-      <div class="col-md-2">
-        <div class="d-flex align-items-center justify-content-center">
+    <div class="row p-2">
+      <div class="col-md-2 p-3">
+        <div class="d-flex align-items-center justify-content-center adjust-img">
           <img src="../assets/images/userImg.jpg" alt="" />
         </div>
       </div>
@@ -61,11 +57,11 @@
           >
         </div>
       </div>
-      <hr class="mt-4" />
+      <hr>
     </div>
-    <div class="row bg-light p-2">
-      <div class="col-md-2">
-        <div class="d-flex align-items-center justify-content-center">
+    <div class="row p-2 last">
+      <div class="col-md-2 p-3">
+        <div class="d-flex align-items-center justify-content-center adjust-img">
           <img src="../assets/images/userImg.jpg" alt="" />
         </div>
       </div>
@@ -79,7 +75,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 </template>
 
 <script>
@@ -98,8 +94,9 @@ export default {
   padding: 20px 20px 0px 20px;
   background-color: var(--questions-bg-widget);
   border-radius: 2px;
-  border-bottom: 2px solid var(--bottom-separator-color);
+  /* border-bottom: 2px solid var(--bottom-separator-color); */
 }
+
 .parent div {
   width: 50%;
   background-color: #fff;
@@ -198,24 +195,47 @@ h3 {
   border: 1px solid var(--separator-color);
   padding: 12px 10px;
   color: var(--btn-bg-gray);
-  border-bottom: none;
+  /* border-bottom: none;  */
 }
 
 .popular-btn {
   border-right: 0px !important;
+  border-bottom: var(--white-text) !important;
+  background-color: var(--white-text) !important;
+  color: var(--ancor-color) !important;
 }
 
 .buttons button:hover {
   color: var(--main-blue-bg-text-color);
 }
 
-/* section img {
+hr {
+  width: 85%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Test Section */
+.test {
+  background-color: var(--white-text);
+  border-bottom: 2px solid var(--bottom-separator-color);
+}
+
+.last {
+  margin-bottom: 20px;
+}
+
+section img {
   border-radius: 50%;
-  width: 220%;
+  width: 150%;
 }
 
 section h4 {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--roboto-font-family);
+  color: var(--ancor-color);
 }
 
 section span {
@@ -225,14 +245,13 @@ section span {
 
 section span i {
   padding-left: 15px;
-} */
+} 
 
-/* Btn */
-/* .btn {
-  background-color: var(--profile-bg) !important;
-  border: 1px solid #ddd;
-  border-radius: 1px !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-} */
+.adjust-img {
+  margin-top: -15px;
+}
+
+.adjust-img img {
+  margin-left: 20px;
+}
 </style>
