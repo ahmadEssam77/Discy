@@ -15,8 +15,7 @@
       <!-- Right -->
       <div class="col-md-3">
         <Rightside />
-        <Questionsinsights />
-        <Relatedquestions />
+        <!-- <Relatedquestions /> -->
       </div>
     </div>
   </div>
@@ -30,9 +29,8 @@ import Createnewaccount from "./components/Createnewaccount.vue";
 import Navbar from "./components/Navbar.vue";
 import Rightside from "./components/Rightside.vue";
 // import Home from "./components/Home.vue";
-import Questionsinsights from "./components/Questionsinsights.vue";
 import Leftside from "./components/Leftside.vue";
-import Relatedquestions from "./components/Relatedquestions.vue";
+// import Relatedquestions from "./components/Relatedquestions.vue";
 // import Upbutton from "./components/Upbutton.vue";
 // import Footer from "./components/Footer.vue";
 
@@ -43,8 +41,7 @@ export default {
     Rightside,
     // Home,
     Leftside,
-    Questionsinsights,
-    Relatedquestions,
+    // Relatedquestions,
     // Upbutton,
     Createnewaccount,
     // Footer,

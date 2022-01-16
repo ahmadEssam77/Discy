@@ -1,25 +1,51 @@
 <template>
-  <div class="ask-question d-flex justify-content-center align-items-center">
-    <button class="btn btn-primary">Ask A Question</button>
+  <div class="text-center">
+    <button class="">Ask A Question</button>
   </div>
+  <Questionsinsights />
+  <Topmembers />
+  <Trendingtags />
 </template>
 
 <script>
+import Questionsinsights from "./Questionsinsights.vue";
+import Trendingtags from "./Trendingtags.vue";
+import Topmembers from "./Topmembers.vue";
+
 export default {
   name: "Rightside",
-  components: {},
+  components: {
+    Trendingtags,
+    Questionsinsights,
+    Topmembers,
+  },
 };
 </script>
 
 <style scoped>
-.ask-question {
-  background-color: #fff;
-  padding: 10px 1px;
+div {
+  background-color: var(--white-text);
   border-bottom: 2px solid var(--bottom-separator-color);
+  padding: 20px;
 }
 
-.btn {
-  padding: 3px 20px !important;
-  border-radius: 3px !important;
+button {
+  border-radius: 2px;
+  padding: 10px 50px;
+  color: var(--white-text);
+  border: none;
+  background-color: var(--main-blue-bg-text-color);
+  transition: 0.5s;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.5s;
+  width: 235px;
+}
+
+/* Media query */
+@media screen and (max-width: 800px) {
+  div {
+    display: none;
+  }
 }
 </style>

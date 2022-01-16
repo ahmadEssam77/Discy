@@ -5,10 +5,10 @@
       <div class="separator position-absolute"></div>
       <div class="row bg-light p-2">
         <div class="col-md-2 pt-5 pb-3">
-          <i class="fas fa-question"></i>
+          <!-- <i class="fas fa-question"></i> -->
         </div>
         <div class="col-md-10 pt-5 pb-3">
-          <h2 class="">Related Questions</h2>
+          <!-- <h2 class="">Related Questions</h2> -->
         </div>
         <div class="col-md-2">
           <div class="d-flex align-items-center justify-content-center">
@@ -61,7 +61,7 @@
       </div>
     </section>
     <!-- Top members -->
-    <section class="position-relative">
+    <!-- <section class="position-relative">
       <div class="separator position-absolute"></div>
       <div class="row bg-light p-2">
         <div class="col-md-2 pt-5 pb-3">
@@ -117,39 +117,7 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- Trending Tags -->
-    <section class="position-relative">
-      <div class="separator position-absolute"></div>
-      <div class="row bg-light p-2">
-        <h2 class="pt-5 pb-4">
-          <i class="fas fa-tag fa-flip-horizontal ps-3"></i> Trending Tags
-        </h2>
-        <div class="tags-wrapper">
-          <a href="">analytics</a>
-          <a href="">british</a>
-          <a href="">company</a>
-          <a href="">computer</a>
-          <a href="">developers</a>
-          <a href="">django</a>
-          <a href="">employee</a>
-          <a href="">employer</a>
-          <a href="">english</a>
-          <a href="">facebook</a>
-          <a href="">french</a>
-          <a href="">google</a>
-          <a href="">interview</a>
-          <a href="">javascript</a>
-          <a href="">language</a>
-          <a href="">life</a>
-          <a href="">php</a>
-          <a href="">programmer</a>
-          <a href="">program</a>
-          <a href="">salary</a>
-          <a href="">university</a>
-        </div>
-      </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -191,7 +159,7 @@ section span i {
 }
 
 /* Member */
-.user-img img {
+/* .user-img img {
   border-radius: 50%;
   border: 2px solid blue;
   padding: 3px;
@@ -207,25 +175,5 @@ section span i {
   width: fit-content;
   margin-top: 15px;
   margin-bottom: 15px;
-}
-
-/* Tags wrapper */
-.tags-wrapper a {
-  text-decoration: none;
-  color: var(--paragraph-color);
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 2px 5px;
-  border-radius: 1px;
-  margin: 0 5px 5px 5px;
-  font-size: 13px;
-  transition: 0.5s;
-  display: inline-block;
-}
-
-.tags-wrapper a:hover {
-  background-color: blue;
-  color: #fff;
-  border-color: blue;
-}
+} */
 </style>
