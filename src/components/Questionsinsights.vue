@@ -27,7 +27,9 @@
   <section class="test">
     <div class="row p-2 pt-3">
       <div class="col-md-2 p-3">
-        <div class="d-flex align-items-center justify-content-center adjust-img">
+        <div
+          class="d-flex align-items-center justify-content-center adjust-img"
+        >
           <img src="../assets/images/userImg.jpg" alt="" />
         </div>
       </div>
@@ -40,11 +42,13 @@
           >
         </div>
       </div>
-      <hr>
+      <hr />
     </div>
     <div class="row p-2">
       <div class="col-md-2 p-3">
-        <div class="d-flex align-items-center justify-content-center adjust-img">
+        <div
+          class="d-flex align-items-center justify-content-center adjust-img"
+        >
           <img src="../assets/images/userImg.jpg" alt="" />
         </div>
       </div>
@@ -57,11 +61,13 @@
           >
         </div>
       </div>
-      <hr>
+      <hr />
     </div>
     <div class="row p-2 last">
       <div class="col-md-2 p-3">
-        <div class="d-flex align-items-center justify-content-center adjust-img">
+        <div
+          class="d-flex align-items-center justify-content-center adjust-img"
+        >
           <img src="../assets/images/userImg.jpg" alt="" />
         </div>
       </div>
@@ -245,7 +251,7 @@ section span {
 
 section span i {
   padding-left: 15px;
-} 
+}
 
 .adjust-img {
   margin-top: -15px;

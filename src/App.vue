@@ -19,30 +19,26 @@
   </div>
   <!-- <Upbutton /> -->
   <!-- Footer -->
-  <!-- <Footer /> -->
+  <Footer />
 </template>
 
 <script>
 import Createnewaccount from "./components/Createnewaccount.vue";
 import Navbar from "./components/Navbar.vue";
 import Rightside from "./components/Rightside.vue";
-// import Home from "./components/Home.vue";
 import Leftside from "./components/Leftside.vue";
-// import Relatedquestions from "./components/Relatedquestions.vue";
 // import Upbutton from "./components/Upbutton.vue";
-// import Footer from "./components/Footer.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
     Rightside,
-    // Home,
     Leftside,
-    // Relatedquestions,
     // Upbutton,
     Createnewaccount,
-    // Footer,
+    Footer,
   },
 };
 </script>
@@ -56,6 +52,6 @@ body {
 }
 
 .container {
-  max-width: 1200px !important;
+  max-width: 1175px !important;
 }
 </style>

@@ -117,7 +117,7 @@ export default {
   outline: none;
   border: none;
   border-radius: 3px;
-  width: 220px;
+  width: 232px;
   font-size: 12px;
 }
 
