@@ -1,74 +1,37 @@
 <template>
   <div class="nav-wrapper">
-    <div class="container">
-      <div class="row position-relative">
-        <!-- Logo 2 col-->
-        <div
-          class="col-md-2 d-flex align-items-center justify-content-start main-logo"
-        >
-          <div class="">
-            <a href="#">
-              <img src="../assets/images/logo.png" alt="Logo" />
-            </a>
-          </div>
-        </div>
-        <!-- Navbar and search 7 col -->
-        <div class="col-md-7 middle">
-          <!-- Navbar bootstrap component -->
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link my-active" aria-current="page" href="#"
-                      >Home</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                  </li>
-                </ul>
-                <form class="d-flex position-relative">
-                  <input
-                    class="form-control nav-search"
-                    type="search"
-                    placeholder="Type Search Words"
-                    aria-label="Search"
-                  />
-                  <i class="fas fa-search icon-search"></i>
-                </form>
-              </div>
-            </div>
-          </nav>
-        </div>
-        <!-- Login 3 col-->
-        <div class="col-md-3 d-flex align-items-center lock-wrapper">
-          <div class="login">
-            <button class="my-btn in">Sign In</button>
-            <button class="my-btn up">Sign Up</button>
-          </div>
-          <div class="lock">
-            <i class="fas fa-lock"></i>
-          </div>
+    <div class="container d-flex">
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="" />
+      </div>
+      <div class="nav d-flex align-items-center justify-content-between">
+        <ul class="d-flex list-unstyled">
+          <li class="home">
+            <a href="" class="text-decoration-none active">Home</a>
+          </li>
+          <li class="about">
+            <a href="" class="text-decoration-none">About Us</a>
+          </li>
+          <li class="blog"><a href="" class="text-decoration-none">Blog</a></li>
+          <li class="contact">
+            <a href="" class="text-decoration-none">Contact Us</a>
+          </li>
+        </ul>
+        <div class="search position-relative">
+          <input type="search" name="" id="" placeholder="Type Search Words" />
+          <i class="fas fa-search icon-search"></i>
         </div>
       </div>
+      <div class="login">
+        <button class="sign-in">Sign In</button>
+        <button class="sign-up">Sign Up</button>
+      </div>
+      <div class="lock">
+        <i class="fas fa-lock"></i>
+      </div>
+    </div>
+    <div class="hamburger-menu-wrapper">
+      <div class="hamburger-menu"></div>
     </div>
   </div>
 </template>
@@ -80,113 +43,199 @@ export default {
 </script>
 
 <style scoped>
-/* Nav Wrapper */
+/* Nav */
 .nav-wrapper {
   background-color: var(--navbar-bg);
-  padding: 17px 0;
 }
 
-/* Middle section in navbar */
-.middle {
+.logo {
+  width: 201px;
+  padding-top: 21px;
+}
+
+.nav {
+  width: 702px;
   border-left: 1px solid #33353c;
   border-right: 1px solid #33353c;
 }
 
-.nav-link {
-  color: var(--white-text) !important;
-  padding-top: 3px;
-  padding-bottom: 3px;
+ul {
+  padding-top: 17px;
+}
+
+a {
+  color: var(--white-text);
+}
+
+.hamburger-menu-wrapper {
+  display: none;
+}
+
+.hamburger-menu {
+  height: 2.5px;
+  border-radius: 2px;
+  width: 13px;
+  background-color: var(--white-text);
+  position: relative;
+}
+
+.hamburger-menu:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  background-color: var(--white-text);
+  border-radius: 2px;
+  height: 2.5px;
+  top: 3px;
+}
+
+.hamburger-menu:before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  background-color: var(--white-text);
+  border-radius: 2px;
+  height: 2.5px;
+  bottom: 3px;
+}
+
+.home {
+  padding-left: 20px;
+  padding-right: 19px;
+  font-weight: 700;
   font-size: 14px;
-  font-weight: bold;
-  transition: 0.5s;
-  margin-right: 0.5rem;
   font-family: var(--roboto-font-family);
 }
 
-.nav-link:hover {
-  background-color: var(--footer-bg);
+.about,
+.blog {
+  padding-right: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: var(--roboto-font-family);
 }
 
-.my-active {
-  background-color: var(--footer-bg);
+.contact {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: var(--roboto-font-family);
 }
 
-.nav-search {
+.active {
+  background-color: var(--footer-bg);
+  padding-top: 5.5px;
+  padding-bottom: 8.5px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  border-radius: 2px;
+}
+
+input {
   background-color: #202228;
-  padding: 7px;
+  padding: 6px 5px 6px 10px;
   outline: none;
   border: none;
   border-radius: 3px;
-  width: 232px;
+  width: 230px;
   font-size: 12px;
+  margin-right: 17px;
 }
 
-.nav-search::placeholder {
+input::placeholder {
   font-size: 12px;
-  padding-left: 7px;
   font-family: var(--arial-font-family);
   font-style: italic;
-}
-
-.nav-search:focus {
+  font-weight: 400;
   color: #7c7f85;
-  outline: none;
-  box-shadow: none !important;
 }
 
-.icon-search {
+input:focus {
+  color: #7c7f85;
+}
+
+/* Search icon */
+i {
   position: absolute;
   color: var(--white-text);
-  right: 12px;
-  top: 8px;
+  right: 28px;
+  top: 7px;
+  font-size: 14px;
 }
 
-/* Buttons - Login */
-.my-btn {
-  border-radius: 2px;
-  margin-right: 15px;
-  padding: 3px 25px;
-  color: var(--white-text);
-  border: none;
+.login {
+  width: 270px;
+  border-right: 1px solid #33353c;
+  padding-top: 25px;
+  padding-bottom: 28px;
+}
+
+button {
+  font-size: 14px;
+  font-weight: 700;
   font-family: var(--roboto-font-family);
+  color: var(--white-text);
+  width: 103px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sign-in {
+  background-color: var(--main-blue-bg-text-color);
+  border-radius: 2px;
+  border: none;
+  margin-left: 21px;
+  margin-right: 20px;
   transition: 0.5s;
 }
 
-.my-btn:hover {
+.sign-in:hover,
+.sign-up:hover {
   background-color: var(--widget-red-color);
 }
 
-.in {
-  background-color: var(--main-blue-bg-text-color);
-}
-
-.up {
+.sign-up {
+  margin-right: 21px;
+  border-radius: 2px;
+  border: none;
   background-color: var(--btn-bg-gray);
+  transition: 0.5s;
 }
 
+/* Lock sign-in-up div */
 .lock {
-  color: var(--white-text);
-  cursor: pointer;
   display: none;
 }
 
 /* Media Query */
 @media screen and (max-width: 800px) {
-  .main-logo {
-    width: 50%;
-    position: absolute;
-    left: 30%;
+  .nav-wrapper {
+    height: 84px !important;
   }
 
-  .middle {
-    width: 15%;
-    border: none;
+  .nav {
+    border-left: none;
+    border-right: none;
+    display: none !important;
+  }
+
+  .hamburger-menu-wrapper {
+    display: inline-block;
     position: relative;
-    left: -5%;
+    top: -41px;
+    left: 20px;
+    cursor: pointer;
+
+    background-color: var(--navbar-bg);
+    line-height: 18px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 12px 9px 15px;
+    border-radius: 2px;
+    transition: 0.5s;
   }
 
-  .lock-wrapper {
-    width: 15%;
+  .hamburger-menu-wrapper:hover {
+    background-color: var(--footer-bg);
   }
 
   .login {
@@ -196,15 +245,27 @@ export default {
   .lock {
     display: block !important;
     position: absolute;
-    right: 5%;
+    right: -2%;
+    top: 22px;
   }
 
-  .lock:hover {
+  .lock i {
+    font-size: 20px;
+  }
+
+  .lock i:hover {
     color: var(--main-blue-bg-text-color);
+    transition: 0.5s;
+    cursor: pointer;
   }
 
-  .navbar button {
-    border: none;
+  .logo {
+    position: relative;
+    left: 35%;
+    bottom: 0px;
+    padding-top: 20px;
+    cursor: pointer;
+    width: fit-content;
   }
 }
 </style>

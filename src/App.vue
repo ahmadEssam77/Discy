@@ -52,6 +52,8 @@ body {
 }
 
 .container {
-  max-width: 1175px !important;
+  max-width: 1171px !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 </style>
