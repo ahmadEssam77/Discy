@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5 left-side">
+  <div class="left-side">
     <ul>
       <li>
         <router-link
@@ -123,6 +123,10 @@ export default {
 </script>
 
 <style scoped>
+.left-side {
+  padding-top: 40px;
+}
+
 .myActive {
   color: var(--main-blue-bg-text-color);
 }
@@ -132,7 +136,7 @@ a {
   text-decoration: none;
   color: var(--ancor-color);
   font-family: var(--roboto-font-family);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   transition: 0.5s;
 }
@@ -143,8 +147,13 @@ a:hover {
 
 ul {
   list-style: none;
-  line-height: 3;
+  line-height: 2.5;
   padding-left: 0;
+}
+
+.left-side i {
+  font-size: 18px;
+  /* font-weight: 400; */
 }
 
 /* Questions list */

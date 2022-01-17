@@ -2,17 +2,17 @@
   <Navbar />
   <Createnewaccount />
   <div class="container">
-    <div class="row">
+    <div class="d-flex">
       <!-- Left -->
-      <div class="col-md-2">
+      <div class="design-left">
         <Leftside />
       </div>
       <!-- Middle -->
-      <div class="col-md-7">
+      <div class="design-middle">
         <router-view></router-view>
       </div>
       <!-- Right -->
-      <div class="col-md-3">
+      <div class="design-right">
         <Rightside />
       </div>
     </div>
@@ -55,5 +55,18 @@ body {
   max-width: 1171px !important;
   padding-right: 0 !important;
   padding-left: 0 !important;
+}
+
+.design-left {
+  width: 201px;
+}
+
+.design-middle {
+  width: 690px;
+  margin-right: 12px;
+}
+
+.design-right {
+  width: 270px;
 }
 </style>
