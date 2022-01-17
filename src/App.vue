@@ -2,7 +2,7 @@
   <Navbar />
   <Createnewaccount />
   <div class="container">
-    <div class="d-flex">
+    <div class="d-flex adjust-layout">
       <!-- Left -->
       <div class="design-left">
         <Leftside />
@@ -19,7 +19,7 @@
   </div>
   <!-- <Upbutton /> -->
   <!-- Footer -->
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <script>
@@ -28,7 +28,7 @@ import Navbar from "./components/Navbar.vue";
 import Rightside from "./components/Rightside.vue";
 import Leftside from "./components/Leftside.vue";
 // import Upbutton from "./components/Upbutton.vue";
-import Footer from "./components/Footer.vue";
+// import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -38,7 +38,7 @@ export default {
     Leftside,
     // Upbutton,
     Createnewaccount,
-    Footer,
+    // Footer,
   },
 };
 </script>
@@ -62,11 +62,25 @@ body {
 }
 
 .design-middle {
-  width: 690px;
-  margin-right: 12px;
+  width: 692px;
+  margin-right: 10px;
+  border-right: 1px solid #e4e5e6;
+  border-left: 1px solid #e4e5e6;
 }
 
 .design-right {
   width: 270px;
+  border-right: 1px solid #e4e5e6;
+  border-left: 1px solid #e4e5e6;
+}
+
+@media screen and (max-width: 800px) {
+  .adjust-layout {
+    flex-direction: column;
+  }
+
+  .design-middle {
+    width: 100%;
+  }
 }
 </style>

@@ -59,13 +59,14 @@ export default {
 a {
   text-decoration: none;
   color: #707885;
-  padding-bottom: 29px;
+  padding-bottom: 28.4px;
   transition: 0.2s;
+  border-bottom: 3.5px solid var(--white-text);
 }
 
 ul {
   list-style: none;
-  padding: 10px 10px 0 10px;
+  padding: 8px 10px 0 10px;
 }
 
 ul li {
@@ -86,6 +87,9 @@ a:hover {
 
 .more {
   color: var(--navbar-bg);
+  position: relative;
+  top: 3px;
+  border-bottom: none;
 }
 
 .parent-more:hover .select-more {
@@ -102,7 +106,7 @@ a:hover {
   font-family: var(--roboto-font-family);
   font-weight: 700;
   padding: 5px 10px;
-  right: 0;
+  right: -10px;
   z-index: 20;
   top: 45px;
   border-radius: 2px;
@@ -144,7 +148,7 @@ a:hover {
 
   .questions-filter-select {
     display: block;
-    padding: 10px;
+    padding: 15px;
     background-color: var(--white-text);
   }
 
@@ -153,6 +157,7 @@ a:hover {
     width: 100%;
     color: #677075;
     outline: none;
+    border-radius: 2px;
     font-size: 13px;
     border-color: var(--bottom-separator-color);
     font-family: var(--arial-font-family);

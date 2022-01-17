@@ -26,20 +26,27 @@ export default {
 div {
   background-color: var(--white-text);
   border-bottom: 2px solid var(--bottom-separator-color);
-  padding: 20px;
+  padding: 18px;
 }
 
 button {
   border-radius: 2px;
-  padding: 10px 50px;
+  padding: 9px 12px 9px;
   color: var(--white-text);
   border: none;
   background-color: var(--main-blue-bg-text-color);
   transition: 0.5s;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: var(--roboto-font-family);
   transition: 0.5s;
-  width: 235px;
+  letter-spacing: .8px;
+  width: 230px;
+  margin-bottom: 2.5px;
+}
+
+button:hover {
+  background-color: var(--btn-bg-gray);
 }
 
 /* Media query */

@@ -1,12 +1,12 @@
 <template>
   <div class="social-question">
-    <div class="row">
-      <div class="col-md-2">
+    <div class="d-flex">
+      <div class="img-counter">
         <div
           class="user-img d-flex align-items-center justify-content-center position-relative"
         >
           <img src="../assets/images/userImg.jpg" alt="" />
-          <div
+          <!-- <div
             class="user-popup position-absolute bg-white p-3 text-center rounded-1"
           >
             <div>
@@ -28,9 +28,9 @@
               </ul>
             </div>
             <button class="btn btn-primary form-control">View Profile</button>
-          </div>
+          </div> -->
         </div>
-        <div class="vote d-flex align-items-center justify-content-center">
+        <!-- <div class="vote d-flex align-items-center justify-content-center">
           <div>
             <span @click="addCounter"><i class="fas fa-sort-up"></i></span>
             <p class="mb-0 counter-wrapper">
@@ -40,30 +40,31 @@
               ><i class="fas fa-sort-down"></i
             ></span>
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="col-md-10">
-        <div class="d-flex align-items-center py-1">
-          <div class="name me-2">Martin Hope</div>
-          <div class="tag me-2">Enlightened</div>
-          <div class="question-date me-2">
+      <div class="the-main-question">
+        <div class="d-flex align-items-center">
+          <div class="name">Martin Hope</div>
+          <div class="tag">Enlightened</div>
+          <div class="question-date">
             <span>Asked:</span><span class="date"> April 19, 2018</span>
           </div>
-          <div class="language me-2">
+          <div class="language">
             <span>In:</span><span class="lang"> Language</span>
           </div>
         </div>
         <div class="user-asked">
           <h5>
-            Question .. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Explicabo ullam numquam molestiae vero at quia?
+            Is this statement, “i see him last night” can be understood as “I
+            saw him last night”?
           </h5>
         </div>
-        <div>
+        <div class="user-description">
           <p>
-            Answer .. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Placeat, natus consectetur quasi saepe numquam similique tempora
-            amet voluptas facilis. Optio...
+            In my local language (Bahasa Indonesia) there are no verb-2 or past
+            tense form as time tracker. So, I often forget to use the past form
+            of verb when speaking english. I saw him last night (correct) I see
+            him last night ...
           </p>
         </div>
         <div class="tags">
@@ -110,43 +111,102 @@ export default {
 
 <style scoped>
 .social-question {
-  background-color: #fff;
-  padding: 20px;
-  border-bottom: 0.5px #ccc solid;
+  background-color: var(--white-text);
+  padding: 28px;
+  border-bottom: 0.5px solid var(--separator-color);
+}
+
+.img-counter {
+  width: 10%;
+}
+
+.the-main-question {
+  width: 90%;
+}
+
+.user-img {
+  width: 70%;
+}
+
+.user-img img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--main-blue-bg-text-color);
+  padding: 3px;
+  cursor: pointer;
 }
 
 .name {
   font-size: 14px;
-  color: blue;
+  color: var(--main-blue-bg-text-color);
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  transition: 1s;
+  font-family: var(--roboto-font-family);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.name:hover {
+  color: var(--navbar-bg);
 }
 
 .tag {
-  background-color: #eeb78f;
-  color: #fff;
-  font-size: 12px;
-  padding: 2px;
-}
-
-.question-date,
-.language {
-  font-size: 12px;
+  background-color: var(--badge-bg);
+  color: var(--white-text);
+  font-size: 11px;
+  padding: 1px 4px 2px;
+  margin-right: 15px;
+  margin-left: 5px;
+  border-radius: 1px;
+  font-family: var(--arial-font-family);
+  text-transform: capitalize;
 }
 
 .question-date span,
 .language span {
-  color: darkgray;
+  color: var(--btn-bg-gray);
+  font-size: 11px;
+  font-weight: 400;
+  font-family: var(--arial-font-family);
 }
 
 .question-date .date,
 .language .lang {
-  color: blue !important;
+  color: var(--main-blue-bg-text-color);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: var(--arial-font-family);
+  margin-right: 15px;
+  transition: 0.5s;
 }
 
-.user-img img {
-  border-radius: 50%;
-  border: 2px solid blue;
-  padding: 3px;
+.question-date .date:hover,
+.language .lang:hover {
+  color: var(--navbar-bg);
+}
+
+.user-asked h5 {
+  transition: 1s;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--navbar-bg);
+  transition: 0.5s;
   cursor: pointer;
+}
+
+.user-asked h5:hover {
+  color: var(--main-blue-bg-text-color);
+}
+
+.user-description p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: var(--roboto-font-family);
+  color: var(--footer-text-color);
 }
 
 .tags span,
@@ -201,26 +261,10 @@ export default {
   outline: none;
 }
 
-/* Related hovering */
-.user-asked h5 {
-  transition: 1s;
-}
-
-/* Hovering */
-.user-asked h5:hover {
-  cursor: pointer;
-  color: blue;
-}
-
 .tags span:hover {
   background-color: blue;
   color: #fff;
   border-color: blue;
-}
-
-.btn:hover {
-  background-color: blue;
-  border-color: blue !important;
 }
 
 .user-img:hover .user-popup {
