@@ -186,7 +186,7 @@ button {
   margin-left: 21px;
   margin-right: 20px;
   transition: 0.5s;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
 }
 
 .sign-in:hover,
@@ -200,7 +200,7 @@ button {
   border: none;
   background-color: var(--btn-bg-gray);
   transition: 0.5s;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
 }
 
 /* Lock sign-in-up div */

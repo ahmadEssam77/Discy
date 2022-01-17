@@ -1,12 +1,12 @@
 <template>
-    <div class="add-search d-flex align-items-center justify-content-between">
-      <div class="left-search">
-        <a href="#"><i class="fas fa-search icon-search"></i> Search</a>
-      </div>
-      <div class="right-question">
-        <a href="#"><i class="fas fa-question-circle"></i> Ask A Question</a>
-      </div>
+  <div class="add-search d-flex align-items-center justify-content-between">
+    <div class="left-search">
+      <a href="#"><i class="fas fa-search icon-search"></i> Search</a>
     </div>
+    <div class="right-question">
+      <a href="#"><i class="fas fa-question-circle"></i> Ask A Question</a>
+    </div>
+  </div>
   <div class="create-account">
     <div
       class="container d-flex justify-content-between align-items-center change-dir"
@@ -76,7 +76,7 @@ button {
   font-size: 14px;
   font-weight: 700;
   transition: 0.5s;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   width: 270px;
 }
 
@@ -89,7 +89,6 @@ button:hover {
 }
 
 @media screen and (max-width: 800px) {
-
   .create-account {
     padding: 15px 10px 0;
   }
