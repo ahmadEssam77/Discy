@@ -1,5 +1,4 @@
 <template>
-  <div class="p-5 create-account">
     <div class="add-search d-flex align-items-center justify-content-between">
       <div class="left-search">
         <a href="#"><i class="fas fa-search icon-search"></i> Search</a>
@@ -8,11 +7,12 @@
         <a href="#"><i class="fas fa-question-circle"></i> Ask A Question</a>
       </div>
     </div>
+  <div class="create-account">
     <div
       class="container d-flex justify-content-between align-items-center change-dir"
     >
       <div class="left w-50">
-        <h3 class="pb-3">Share & grow the world's knowledge!</h3>
+        <h3 class="">Share & grow the world's knowledge!</h3>
         <p>
           We want to connect the people who have knowledge to the people who
           need it, to bring together people with different perspectives so they
@@ -35,9 +35,10 @@ export default {
 
 <style scoped>
 .create-account {
-  background-image: url(../assets/images/laptop.jpg);
-  background-position: 100% 100%;
+  background-image: url(../assets/images/action.png);
   background-size: cover;
+  padding-top: 56px;
+  padding-bottom: 29px;
 }
 
 .left,
@@ -45,26 +46,38 @@ export default {
   font-family: var(--roboto-font-family);
 }
 
+.right {
+  margin-bottom: 23px;
+}
+
 h3 {
   font-size: 22px;
   color: var(--white-text);
+  font-family: var(--roboto-font-family);
+  font-weight: 700;
+  padding-bottom: 15px;
 }
 
 p {
   color: var(--questions-bg-widget);
+  font-family: var(--roboto-font-family);
+  line-height: 26px;
+  margin-bottom: 20px;
 }
 
 button {
   border-radius: 2px;
-  margin-right: 20px;
-  padding: 8px 50px;
+  /* margin-right: 20px; */
+  padding: 8px 40px;
   color: var(--white-text);
   border: none;
   background-color: var(--main-blue-bg-text-color);
   transition: 0.5s;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   transition: 0.5s;
+  letter-spacing: .8px;
+  width: 270px;
 }
 
 button:hover {
@@ -76,12 +89,17 @@ button:hover {
 }
 
 @media screen and (max-width: 800px) {
+
   .create-account {
-    padding: 0px !important;
+    padding: 15px 10px 0;
   }
 
   .left {
     width: 100% !important;
+  }
+
+  .right {
+    margin-bottom: 8px;
   }
 
   .change-dir {
@@ -96,8 +114,7 @@ button:hover {
   .add-search {
     display: flex !important;
     background-color: var(--questions-bg-widget);
-    padding: 20px 10px;
-    margin-bottom: 10px;
+    padding: 18px 10px;
   }
 
   .add-search a {
@@ -105,10 +122,20 @@ button:hover {
     font-family: var(--roboto-font-family);
     color: var(--navbar-bg);
     text-decoration: none;
+    font-weight: 400;
   }
 
   .add-search a:hover {
     color: var(--main-blue-bg-text-color);
+  }
+
+  .left-search i {
+    font-size: 11px;
+    margin-right: 2px;
+  }
+
+  .right-question i {
+    font-size: 13px;
   }
 }
 </style>
