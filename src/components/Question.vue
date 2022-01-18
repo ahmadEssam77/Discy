@@ -6,7 +6,8 @@
           class="user-img d-flex align-items-center justify-content-center position-relative"
         >
           <img src="../assets/images/userImg.jpg" alt="" />
-          <!-- <div
+          <!-- Img Hover -->
+          <div
             class="user-popup position-absolute bg-white p-3 text-center rounded-1"
           >
             <div>
@@ -17,21 +18,26 @@
               <i class="fas fa-map-marker-alt"></i> <span>Damita, Egypt</span>
             </p>
             <div>
-              <ul class="rounded-1">
-                <li><i class="fas fa-book-open pe-2"></i> Questions</li>
+              <ul class="">
+                <li><i class="fas fa-book-open"></i> Questions</li>
                 <li>
-                  <i class="fas fa-comment-alt fa-flip-horizontal ps-2"></i>
+                  <i
+                    class="fas fa-comment-alt fa-flip-horizontal special-answer"
+                  ></i>
                   Answers
                 </li>
-                <li><i class="fas fa-graduation-cap pe-2"></i> Best Answers</li>
-                <li><i class="fab fa-bitbucket pe-2"></i> Points</li>
+                <li><i class="fas fa-graduation-cap"></i> Best Answers</li>
+                <li><i class="fab fa-bitbucket"></i> Points</li>
               </ul>
             </div>
-            <button class="btn btn-primary form-control">View Profile</button>
-          </div> -->
+            <button class="form-control">View Profile</button>
+          </div>
         </div>
-        <!-- <div class="vote d-flex align-items-center justify-content-center">
-          <div>
+        <div class="vote position-relative">
+          <div class="arrow-up" @click="addCounter()"></div>
+          <div class="vote-counter">{{count}}</div>
+          <div class="arrow-down" @click="decreaseCounter()"></div>
+          <!-- <div>
             <span @click="addCounter"><i class="fas fa-sort-up"></i></span>
             <p class="mb-0 counter-wrapper">
               <input type="text" name="" v-model="counter" id="" readonly />
@@ -39,11 +45,11 @@
             <span @click="decreaseCounter"
               ><i class="fas fa-sort-down"></i
             ></span>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
       </div>
       <div class="the-main-question">
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center user-info">
           <div class="name">Martin Hope</div>
           <div class="tag">Enlightened</div>
           <div class="question-date">
@@ -71,18 +77,16 @@
           <span>english</span>
           <span>language</span>
         </div>
-        <div class="q-view-answer mt-4">
+        <div class="q-view-answer">
           <div class="d-flex justify-content-between align-items-center">
             <div>
               <span
-                ><i class="fas fa-comment-alt fa-flip-horizontal me-2"></i> 4
+                ><i class="fas fa-comment-alt fa-flip-horizontal"></i> 3
                 Answers</span
               >
-              <span class="views"
-                ><i class="fas fa-eye me-2"></i> 9K Views</span
-              >
+              <span class="views"><i class="fas fa-eye"></i> 10K Views</span>
             </div>
-            <div><button class="btn btn-dark">Answer</button></div>
+            <div><button class="">Answer</button></div>
           </div>
         </div>
       </div>
@@ -95,15 +99,15 @@ export default {
   name: "Question",
   data() {
     return {
-      counter: 0,
+      count: 530,
     };
   },
   methods: {
     addCounter() {
-      return this.counter++;
+      return this.count++;
     },
     decreaseCounter() {
-      return this.counter--;
+      return this.count--;
     },
   },
 };
@@ -112,7 +116,7 @@ export default {
 <style scoped>
 .social-question {
   background-color: var(--white-text);
-  padding: 28px;
+  padding: 30px;
   border-bottom: 0.5px solid var(--separator-color);
 }
 
@@ -122,6 +126,7 @@ export default {
 
 .the-main-question {
   width: 90%;
+  margin-left: 5px;
 }
 
 .user-img {
@@ -134,6 +139,10 @@ export default {
   border: 2px solid var(--main-blue-bg-text-color);
   padding: 3px;
   cursor: pointer;
+}
+
+.user-info {
+  margin-bottom: 4px;
 }
 
 .name {
@@ -155,7 +164,7 @@ export default {
   background-color: var(--badge-bg);
   color: var(--white-text);
   font-size: 11px;
-  padding: 1px 4px 2px;
+  padding: 1px 4px 1px;
   margin-right: 15px;
   margin-left: 5px;
   border-radius: 1px;
@@ -169,6 +178,8 @@ export default {
   font-size: 11px;
   font-weight: 400;
   font-family: var(--arial-font-family);
+  position: relative;
+  bottom: 3px;
 }
 
 .question-date .date,
@@ -194,6 +205,7 @@ export default {
   line-height: 27px;
   color: var(--navbar-bg);
   transition: 0.5s;
+  font-family: var(--roboto-font-family);
   cursor: pointer;
 }
 
@@ -202,73 +214,75 @@ export default {
 }
 
 .user-description p {
-  margin-bottom: 20px;
+  margin-bottom: 17.5px;
   font-size: 15px;
   line-height: 30px;
   font-family: var(--roboto-font-family);
   color: var(--footer-text-color);
+  padding-top: 8px;
 }
 
-.tags span,
-.q-view-answer span {
-  border: 1px solid #ccc;
-  background-color: #fff;
-  padding: 5px;
-  margin-right: 7px;
-  font-size: 11px;
-  border-radius: 2px;
-  color: gray;
-  cursor: pointer;
-  transition: 0.5s;
+.tags {
+  margin-bottom: 30px;
 }
 
 .q-view-answer {
   padding: 15px;
-  background-color: #f5f5f5;
+  border-radius: 2px;
+  background-color: var(--footer-bg-question);
+}
+
+.tags span,
+.q-view-answer span {
+  border: 1px solid var(--separator-color);
+  background-color: var(--white-text);
+  padding: 3px 5px 4px;
+  margin-right: 7px;
+  font-family: var(--arial-font-family);
+  font-size: 11px;
+  color: var(--btn-bg-gray);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+.q-view-answer span {
+  padding: 8px 10px;
+}
+
+.q-view-answer i {
+  margin-right: 12px;
 }
 
 .q-view-answer .views {
   cursor: text;
 }
 
-.btn {
-  padding: 1px 10px 3px !important;
-  border-radius: 2px !important;
-  transition: 1s !important;
-}
-
-/* Vote */
-.vote {
-  height: 170px;
-}
-
-.vote p {
-  font-size: 20px;
-  text-align: center;
-}
-
-.vote i {
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.vote .counter-wrapper input {
+.q-view-answer button {
+  background-color: var(--navbar-bg);
+  border-radius: 2px;
+  font-family: var(--arial-font-family);
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  padding: 3px 12px 6px 13px;
+  color: var(--white-text);
   border: none;
-  width: 40px;
+  transition: 0.5s;
 }
 
-.vote .counter-wrapper input:focus {
-  outline: none;
+.q-view-answer button:hover {
+  background-color: var(--main-blue-bg-text-color);
 }
 
 .tags span:hover {
-  background-color: blue;
-  color: #fff;
-  border-color: blue;
+  background-color: var(--main-blue-bg-text-color);
+  color: var(--white-text);
+  border-color: var(--main-blue-bg-text-color);
 }
 
 .user-img:hover .user-popup {
-  /* opacity: 1; */
   display: block;
 }
 
@@ -278,24 +292,101 @@ export default {
   top: 100%;
   width: 300px;
   display: none;
-  /* opacity: 0; */
   transition: 0.5s;
 }
 
 .user-popup h3 {
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: 700;
   padding-top: 10px;
+  font-family: var(--roboto-font-family);
+  color: var(--main-blue-bg-text-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.user-popup h3:hover {
+  color: var(--navbar-bg);
+}
+
+.user-popup p {
+  font-family: var(--arial-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--btn-bg-gray);
 }
 
 .user-popup ul {
   list-style: none;
   background-color: var(--profile-bg);
-  padding: 10px;
+  padding: 15px;
   text-align: start !important;
   font-size: 12px;
+  border-radius: 2px;
+  line-height: 2;
+}
+
+.user-popup ul li {
+  color: var(--btn-bg-gray);
+}
+
+.user-popup ul i {
+  padding-right: 10px;
+}
+
+.user-popup ul .special-answer {
+  padding-right: 0px;
+  padding-left: 10px;
 }
 
 .user-popup img {
   width: 30%;
+}
+
+.user-popup button {
+  background-color: var(--main-blue-bg-text-color);
+  transition: 0.5s;
+  font-family: var(--roboto-font-family);
+  color: var(--white-text);
+}
+
+.user-popup button:hover {
+  background-color: var(--widget-red-color);
+}
+
+.vote .arrow-up {
+  width: 0;
+  height: 1px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 54px;
+  left: 17px;
+
+  border-bottom: 9px solid #677075;
+}
+
+.vote .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  top: 104px;
+  left: 17px;
+  cursor: pointer;
+
+  border-top: 9px solid #677075;
+}
+
+.vote .vote-counter {
+  position: absolute;
+  left: 7px;
+  top: 70px;
+  color: #677075;
+  font-family: var(--roboto-font-family);
+  font-size: 20px;
+  font-weight: 700;
 }
 </style>

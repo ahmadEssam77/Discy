@@ -40,7 +40,7 @@ button {
   font-weight: 700;
   font-family: var(--roboto-font-family);
   transition: 0.5s;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   width: 230px;
   margin-bottom: 2.5px;
 }

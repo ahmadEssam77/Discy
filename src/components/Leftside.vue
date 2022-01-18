@@ -57,7 +57,7 @@
           to=""
           @click="activate(6)"
           :class="{ myActive: active == 6 }"
-          ><i class="fas fa-tag fa-flip-horizontal pe-2"></i> Tags</router-link
+          ><i class="fas fa-tag fa-flip-horizontal ps-2"></i> Tags</router-link
         >
       </li>
       <li>
