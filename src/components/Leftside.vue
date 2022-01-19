@@ -125,6 +125,8 @@ export default {
 <style scoped>
 .left-side {
   padding-top: 40px;
+  position: sticky;
+  top: 10px;
 }
 
 .myActive {

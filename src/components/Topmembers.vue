@@ -22,7 +22,7 @@
           <div class="tag">Enlightened</div>
         </div>
       </div>
-      <div class="user-widget">
+      <div class="user-widget user-widget-special">
         <div class="for-img">
           <img src="../assets/images/userImg.jpg" alt="" />
         </div>
@@ -73,6 +73,10 @@ i {
 .user-widget {
   display: flex;
   padding-bottom: 20px;
+}
+
+.user-widget-special {
+  padding-bottom: 0px;
 }
 
 .for-img {

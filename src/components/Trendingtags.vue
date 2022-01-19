@@ -1,9 +1,8 @@
 <template>
   <div>
     <section class="position-relative">
-      <!-- <div class="separator position-absolute"></div> -->
       <div class="row p-2">
-        <h2 class="pt-2">
+        <h2 class="">
           <i class="fas fa-tag fa-flip-horizontal ps-3"></i> Trending Tags
         </h2>
         <div class="tags-wrapper">
@@ -48,6 +47,7 @@ h2 {
   font-weight: 700;
   font-family: var(--roboto-font-family);
   color: var(--ancor-color);
+  padding-top: 12px;
 }
 
 .tags-wrapper a {

@@ -1,33 +1,39 @@
 <template>
-  <div class="text-center">
-    <button class="">Ask A Question</button>
-  </div>
-  <Questionsinsights />
-  <Topmembers />
-  <!-- <Trendingtags /> -->
+  <section>
+    <div class="text-center">
+      <button class="">Ask A Question</button>
+    </div>
+    <Questionsinsights />
+    <Topmembers />
+    <Trendingtags />
+  </section>
 </template>
 
 <script>
 import Questionsinsights from "./Questionsinsights.vue";
 import Topmembers from "./Topmembers.vue";
-// import Trendingtags from "./Trendingtags.vue";
+import Trendingtags from "./Trendingtags.vue";
 
 export default {
   name: "Rightside",
   components: {
     Questionsinsights,
     Topmembers,
-    // Trendingtags,
+    Trendingtags,
   },
 };
 </script>
 
 <style scoped>
+section {
+  position: sticky;
+  top: 10px;
+}
+
 div {
   background-color: var(--white-text);
   border-bottom: 2px solid var(--bottom-separator-color);
   padding: 18px;
-  /* padding-bottom: 0; */
 }
 
 button {
