@@ -193,7 +193,7 @@ h3 {
 /* Test Section */
 .test {
   background-color: var(--white-text);
-  /* border-bottom: 2px solid var(--bottom-separator-color); */
+  border-bottom: 2px solid var(--bottom-separator-color);
 }
 
 .test-parent {
@@ -236,11 +236,21 @@ h3 {
   color: var(--ancor-color);
   padding: 17px 1px 0 0;
   line-height: 1.8;
+  transition: 0.5s;
+}
+
+.for-question h3:hover {
+  cursor: pointer;
+  color: var(--main-blue-bg-text-color);
 }
 
 .for-question span {
   font-size: 12px;
   color: var(--paragraph-color);
+}
+
+.for-question span:hover {
+  color: var(--main-blue-bg-text-color);
 }
 
 .for-question i {

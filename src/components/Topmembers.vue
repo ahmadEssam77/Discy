@@ -1,59 +1,35 @@
 <template>
   <div>
-    <section class="position-relative">
-      <!-- <div class="separator position-absolute"></div> -->
-      <div class="row p-2">
-        <div class="col-md-2 pb-3">
-          <i class="fas fa-user-friends"></i>
+    <section class="topmembers">
+      <h3><i class="fas fa-user-friends"></i> Top Members</h3>
+      <div class="user-widget">
+        <div class="for-img">
+          <img src="../assets/images/userImg.jpg" alt="" />
         </div>
-        <div class="col-md-10 pb-3">
-          <h2 class="">Top members</h2>
-        </div>
-        <div class="col-md-2">
-          <div
-            class="user-img d-flex align-items-center justify-content-center"
-          >
-            <img src="../assets/images/userImg.jpg" alt="" />
-          </div>
-        </div>
-        <div class="col-md-9 offset-1">
-          <div>
-            <h4>Martin Hope</h4>
-            <span class="pe-2">3 Questions </span> <span>659 points</span>
-            <div class="tag me-2">Enlightened</div>
-          </div>
+        <div class="for-users">
+          <h4>Martin Hope</h4>
+          <span class="for-space">3 Questions</span><span>669 Points</span>
+          <div class="tag">Enlightened</div>
         </div>
       </div>
-      <div class="row p-2">
-        <div class="col-md-2">
-          <div
-            class="user-img d-flex align-items-center justify-content-center"
-          >
-            <img src="../assets/images/userImg.jpg" alt="" />
-          </div>
+      <div class="user-widget">
+        <div class="for-img">
+          <img src="../assets/images/userImg.jpg" alt="" />
         </div>
-        <div class="col-md-9 offset-1">
-          <div>
-            <h4>Martin Hope</h4>
-            <span class="pe-2">3 Questions </span> <span>659 points</span>
-            <div class="tag me-2">Enlightened</div>
-          </div>
+        <div class="for-users">
+          <h4>Martin Hope</h4>
+          <span class="for-space">3 Questions</span><span>669 Points</span>
+          <div class="tag">Enlightened</div>
         </div>
       </div>
-      <div class="row p-2">
-        <div class="col-md-2">
-          <div
-            class="user-img d-flex align-items-center justify-content-center"
-          >
-            <img src="../assets/images/userImg.jpg" alt="" />
-          </div>
+      <div class="user-widget">
+        <div class="for-img">
+          <img src="../assets/images/userImg.jpg" alt="" />
         </div>
-        <div class="col-md-9 offset-1">
-          <div>
-            <h4>Martin Hope</h4>
-            <span class="pe-2">3 Questions </span> <span>659 points</span>
-            <div class="tag me-2">Enlightened</div>
-          </div>
+        <div class="for-users">
+          <h4>Martin Hope</h4>
+          <span class="for-space">3 Questions</span><span>669 Points</span>
+          <div class="tag">Enlightened</div>
         </div>
       </div>
     </section>
@@ -61,35 +37,28 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Topmembers",
+};
 </script>
 
 <style scoped>
-h2 {
-  font-size: 14px;
-  font-family: var(--roboto-font-family);
-  font-weight: 700;
+h3, h4 {
   color: var(--ancor-color);
-}
-
-h4 {
-  font-size: 14px;
   font-family: var(--roboto-font-family);
+  font-size: 14px;
   font-weight: 700;
-  color: var(--main-blue-bg-text-color);
+  margin-bottom: 18px;
   transition: 0.5s;
 }
 
-span {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: var(--arial-font-family);
-  color: var(--btn-bg-gray);
+h3 {
+  padding-top: 12px;
 }
 
-span:hover {
+h4 {
+  margin-bottom: 0px;
   color: var(--main-blue-bg-text-color);
-  cursor: pointer;
 }
 
 h4:hover {
@@ -97,12 +66,40 @@ h4:hover {
   cursor: pointer;
 }
 
-.user-img img {
+i {
+  margin-right: 10px;
+}
+
+.user-widget {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.for-img {
+  padding-right: 20px;
+}
+
+.for-img img {
   border-radius: 50%;
-  border: 2px solid blue;
-  padding: 3px;
+  border: 1px solid var(--main-blue-bg-text-color);
+  padding: 4px;
+}
+
+.for-users span {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: var(--arial-font-family);
+  color: var(--btn-bg-gray);
+  transition: 0.5s;
+}
+
+.for-users span:hover {
   cursor: pointer;
-  width: 400%;
+  color: var(--main-blue-bg-text-color);
+}
+
+.for-users .for-space {
+  padding-right: 10px;
 }
 
 .tag {
@@ -113,7 +110,7 @@ h4:hover {
   font-weight: 400;
   font-family: var(--arial-font-family);
   width: fit-content;
-  margin-top: 15px;
+  margin-top: 11px;
   margin-bottom: 15px;
 }
 </style>

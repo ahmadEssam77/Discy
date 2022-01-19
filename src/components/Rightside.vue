@@ -3,20 +3,20 @@
     <button class="">Ask A Question</button>
   </div>
   <Questionsinsights />
-  <!-- <Topmembers /> -->
+  <Topmembers />
   <!-- <Trendingtags /> -->
 </template>
 
 <script>
 import Questionsinsights from "./Questionsinsights.vue";
-// import Topmembers from "./Topmembers.vue";
+import Topmembers from "./Topmembers.vue";
 // import Trendingtags from "./Trendingtags.vue";
 
 export default {
   name: "Rightside",
   components: {
     Questionsinsights,
-    // Topmembers,
+    Topmembers,
     // Trendingtags,
   },
 };
@@ -27,6 +27,7 @@ div {
   background-color: var(--white-text);
   border-bottom: 2px solid var(--bottom-separator-color);
   padding: 18px;
+  padding-bottom: 0;
 }
 
 button {
