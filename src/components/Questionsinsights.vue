@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <div class="parent">
       <div class="questions position-relative">
         <h6>Question</h6>

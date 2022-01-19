@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <section class="topmembers">
       <h3><i class="fas fa-user-friends"></i> Top Members</h3>
       <div class="user-widget">

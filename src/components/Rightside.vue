@@ -27,7 +27,7 @@ div {
   background-color: var(--white-text);
   border-bottom: 2px solid var(--bottom-separator-color);
   padding: 18px;
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
 }
 
 button {
