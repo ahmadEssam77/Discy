@@ -3,21 +3,21 @@
     <button class="">Ask A Question</button>
   </div>
   <Questionsinsights />
-  <Topmembers />
-  <Trendingtags />
+  <!-- <Topmembers /> -->
+  <!-- <Trendingtags /> -->
 </template>
 
 <script>
 import Questionsinsights from "./Questionsinsights.vue";
-import Topmembers from "./Topmembers.vue";
-import Trendingtags from "./Trendingtags.vue";
+// import Topmembers from "./Topmembers.vue";
+// import Trendingtags from "./Trendingtags.vue";
 
 export default {
   name: "Rightside",
   components: {
     Questionsinsights,
-    Topmembers,
-    Trendingtags,
+    // Topmembers,
+    // Trendingtags,
   },
 };
 </script>

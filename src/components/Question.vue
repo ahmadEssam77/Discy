@@ -35,7 +35,7 @@
         </div>
         <div class="vote position-relative">
           <div class="arrow-up" @click="addCounter()"></div>
-          <div class="vote-counter">{{count}}</div>
+          <div class="vote-counter">{{ count }}</div>
           <div class="arrow-down" @click="decreaseCounter()"></div>
           <!-- <div>
             <span @click="addCounter"><i class="fas fa-sort-up"></i></span>
@@ -99,7 +99,7 @@ export default {
   name: "Question",
   data() {
     return {
-      count: 530,
+      count: 529,
     };
   },
   methods: {
