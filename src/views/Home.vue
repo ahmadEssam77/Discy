@@ -28,6 +28,8 @@
   <Question />
   <Question />
   <Question />
+  <Question />
+  <Question />
   <!-- Load more question -->
   <div class="load-more">
     <button class="btn btn-secondary form-control">Load more questions</button>

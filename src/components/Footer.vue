@@ -1,6 +1,6 @@
 <template>
-  <footer class="py-5">
-    <div class="container">
+  <footer class="py-4 position-relative">
+    <div class="container pt-2">
       <div class="row py-5">
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-2">
           <div>
-            <h6 class="pb-2">About us</h6>
+            <h6 class="">About us</h6>
             <ul>
               <li>Meet the team</li>
               <li>Blog</li>
@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-2">
           <div>
-            <h6 class="pb-2">Legal Stuff</h6>
+            <h6 class="">Legal Stuff</h6>
             <ul>
               <li>Terms of Use</li>
               <li>Privacy Policy</li>
@@ -36,7 +36,7 @@
         </div>
         <div class="col-md-2">
           <div>
-            <h6 class="pb-2">Help</h6>
+            <h6 class="">Help</h6>
             <ul>
               <li>Knowledge Base</li>
               <li>Support</li>
@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-2">
           <div>
-            <h6 class="pb-2">Follow</h6>
+            <h6 class="">Follow</h6>
             <div class="d-flex align-items-center icon-wrapper">
               <div class="text-center me-2">
                 <i class="fab fa-facebook-f"></i>
@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="last-footer">
-        <p class="pt-5">&copy; 2022 Discy. All Right Reserved</p>
+        <p class="pt-5">&copy; 2022 Discy. All Rights Reserved</p>
         <p>With Love by <span>2code</span></p>
       </div>
     </div>
@@ -80,7 +80,16 @@ export default {
 <style scoped>
 footer {
   background-color: var(--footer-bg);
-  /* background-color: #707885 */
+}
+
+footer::after {
+  content: "";
+  background-color: #33353c;
+  position: absolute;
+  height: 0.5px;
+  opacity: 0.4;
+  width: 100%;
+  bottom: 27%;
 }
 
 .logo-footer-content {
@@ -97,15 +106,17 @@ h6 {
   font-size: 14px;
   font-family: var(--roboto-font-family);
   color: var(--white-text);
+  padding-bottom: 20px;
 }
 
 footer ul {
   list-style: none;
   padding-left: 0;
+  line-height: 1.8;
 }
 
 footer li {
-  color: var(--footer-text-color);
+  color: var(--btn-bg-gray);
   font-size: 13px;
   font-weight: 400;
   font-family: var(--roboto-font-family);
@@ -146,10 +157,6 @@ footer li:hover {
   color: #7c7f85;
   font-size: 12px;
   font-weight: 400;
-}
-
-.last-footer {
-  border-top: 0.2px solid rgba(255, 255, 255, 0.5);
 }
 
 .last-footer p {
