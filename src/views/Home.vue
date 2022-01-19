@@ -32,7 +32,7 @@
   <Question />
   <!-- Load more question -->
   <div class="load-more">
-    <button class="btn btn-secondary form-control">Load more questions</button>
+    <button class="form-control">Load More Questions</button>
   </div>
 </template>
 
@@ -140,6 +140,24 @@ a:hover {
 .load-more {
   background-color: #fff;
   padding: 20px;
+}
+
+.load-more button {
+  background-color: var(--btn-bg-gray);
+  color: var(--white-text);
+  transition: 0.5s;
+  border-radius: 2px;
+  font-family: var(--roboto-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  padding: 9px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.load-more button:hover {
+  background-color: var(--main-blue-bg-text-color);
 }
 
 /* Media query */
