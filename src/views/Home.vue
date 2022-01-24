@@ -150,7 +150,7 @@ a:hover {
   font-family: var(--roboto-font-family);
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   padding: 9px;
   margin-top: 10px;
   margin-bottom: 10px;

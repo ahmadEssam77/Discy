@@ -201,7 +201,7 @@ h3 {
 }
 
 .test-parent-separator {
-    position: relative;
+  position: relative;
 }
 
 .test-parent-separator::after {

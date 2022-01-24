@@ -43,7 +43,8 @@ export default {
 </script>
 
 <style scoped>
-h3, h4 {
+h3,
+h4 {
   color: var(--ancor-color);
   font-family: var(--roboto-font-family);
   font-size: 14px;
