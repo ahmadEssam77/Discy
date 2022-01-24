@@ -30,57 +30,22 @@
         </div>
         <!-- Accordion -->
         <div>
-          <div class="accordion">
-            <div class="question" @click="showHide()">
+          <div
+            class="accordion"
+            v-for="question in questions"
+            :key="question.id"
+          >
+            <div class="question" @click="question.showP = !question.showP; question.minus = !question.minus">
               <div class="sign">
-                <div class="minus" v-if="minus"></div>
+                <div class="minus" v-if="question.minus"></div>
               </div>
               <div class="ask">
-                <h2>Why do you hate programming?</h2>
+                <h2>{{ question.title }}</h2>
               </div>
             </div>
-            <div class="answer" v-if="showP">
+            <div class="answer" v-if="question.showP">
               <p>
-                Questions that need additional work or that are not a good fit
-                for this site may be put on hold by experienced community
-                members. While questions are on hold, they cannot be answered,
-                but can be edited to make them eligible for reopening.
-              </p>
-            </div>
-          </div>
-          <div class="accordion">
-            <div class="question" @click="showHide()">
-              <div class="sign">
-                <div class="minus" v-if="minus"></div>
-              </div>
-              <div class="ask">
-                <h2>Why do you hate programming?</h2>
-              </div>
-            </div>
-            <div class="answer" v-if="showP">
-              <p>
-                Questions that need additional work or that are not a good fit
-                for this site may be put on hold by experienced community
-                members. While questions are on hold, they cannot be answered,
-                but can be edited to make them eligible for reopening.
-              </p>
-            </div>
-          </div>
-          <div class="accordion">
-            <div class="question" @click="showHide()">
-              <div class="sign">
-                <div class="minus" v-if="minus"></div>
-              </div>
-              <div class="ask">
-                <h2>Why do you hate programming?</h2>
-              </div>
-            </div>
-            <div class="answer" v-if="showP">
-              <p>
-                Questions that need additional work or that are not a good fit
-                for this site may be put on hold by experienced community
-                members. While questions are on hold, they cannot be answered,
-                but can be edited to make them eligible for reopening.
+                {{ question.answer }}
               </p>
             </div>
           </div>
@@ -95,15 +60,107 @@ export default {
   name: "Help",
   data() {
     return {
-      showP: false,
-      minus: true,
+      // showP: false,
+      // minus: true,
+      questions: {
+        q1: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q2: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q3: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q4: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q5: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q6: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q7: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q8: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q9: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+        q10: {
+          title: "Why do you hate programming?",
+          answer: `Questions that need additional work or that are not a good fit
+                  for this site may be put on hold by experienced community
+                  members. While questions are on hold, they cannot be answered,
+                  but can be edited to make them eligible for reopening.`,
+          showP: false,
+          minus: true,
+        },
+      },
     };
   },
   methods: {
     showHide() {
       this.showP = !this.showP;
       this.minus = !this.minus;
-    },    
+    },
   },
 };
 </script>
