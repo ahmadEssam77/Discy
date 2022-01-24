@@ -156,12 +156,6 @@ export default {
       },
     };
   },
-  methods: {
-    showHide() {
-      this.showP = !this.showP;
-      this.minus = !this.minus;
-    },
-  },
 };
 </script>
 
@@ -249,6 +243,7 @@ main {
 .ask h2 {
   font-size: 14px;
   font-weight: 700;
+  margin-top: 7px;
 }
 
 .sign {
