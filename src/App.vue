@@ -13,32 +13,32 @@
       </div>
       <!-- Right -->
       <div class="design-right">
-        <Rightside />
+        <!-- <Rightside /> -->
       </div>
     </div>
   </div>
   <!-- <Upbutton /> -->
   <!-- Footer -->
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <script>
 import Createnewaccount from "./components/Createnewaccount.vue";
 import Navbar from "./components/Navbar.vue";
-import Rightside from "./components/Rightside.vue";
+// import Rightside from "./components/Rightside.vue";
 import Leftside from "./components/Leftside.vue";
 // import Upbutton from "./components/Upbutton.vue";
-import Footer from "./components/Footer.vue";
+// import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
-    Rightside,
+    // Rightside,
     Leftside,
     // Upbutton,
     Createnewaccount,
-    Footer,
+    // Footer,
   },
 };
 </script>
