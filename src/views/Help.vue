@@ -35,7 +35,13 @@
             v-for="question in questions"
             :key="question.id"
           >
-            <div class="question" @click="question.showP = !question.showP; question.minus = !question.minus">
+            <div
+              class="question"
+              @click="
+                question.showP = !question.showP;
+                question.minus = !question.minus;
+              "
+            >
               <div class="sign">
                 <div class="minus" v-if="question.minus"></div>
               </div>
@@ -43,11 +49,13 @@
                 <h2>{{ question.title }}</h2>
               </div>
             </div>
-            <div class="answer" v-if="question.showP">
-              <p>
-                {{ question.answer }}
-              </p>
-            </div>
+            <transition name="fade">
+              <div class="answer" v-if="question.showP">
+                <p>
+                  {{ question.answer }}
+                </p>
+              </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -60,8 +68,6 @@ export default {
   name: "Help",
   data() {
     return {
-      // showP: false,
-      // minus: true,
       questions: {
         q1: {
           title: "Why do you hate programming?",
@@ -160,6 +166,16 @@ export default {
 </script>
 
 <style scoped>
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
 div {
   background-color: var(--white-text);
 }

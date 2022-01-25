@@ -7,14 +7,35 @@
       <div class="nav d-flex align-items-center justify-content-between">
         <ul class="d-flex list-unstyled">
           <li class="home">
-            <a href="" class="text-decoration-none active">Home</a>
+            <router-link
+              to="/"
+              :class="{ active: checkLi == 1 }"
+              @click="activeNavbar(1)"
+              >Home</router-link
+            >
           </li>
           <li class="about">
-            <a href="" class="text-decoration-none">About Us</a>
+            <router-link
+              to="about"
+              :class="{ active: checkLi == 2 }"
+              @click="activeNavbar(2)"
+              >About Us</router-link
+            >
           </li>
-          <li class="blog"><a href="" class="text-decoration-none">Blog</a></li>
+          <li class="blog">
+            <router-link to=""
+              :class="{ active: checkLi == 3 }"
+              @click="activeNavbar(3)"
+              >Blog</router-link
+            >
+          </li>
           <li class="contact">
-            <a href="" class="text-decoration-none">Contact Us</a>
+            <router-link
+              to="contact"
+              :class="{ active: checkLi == 4 }"
+              @click="activeNavbar(4)"
+              >Contact Us</router-link
+            >
           </li>
         </ul>
         <div class="search position-relative">
@@ -39,6 +60,16 @@
 <script>
 export default {
   name: "Navbar",
+  data() {
+    return {
+      checkLi: 1,
+    };
+  },
+  methods: {
+    activeNavbar(n) {
+      this.checkLi = n;
+    },
+  },
 };
 </script>
 
@@ -65,6 +96,11 @@ ul {
 
 a {
   color: var(--white-text);
+  text-decoration: none;
+  /* padding-top: 5.5px;
+  padding-bottom: 8.5px;
+  padding-left: 7.5px;
+  padding-right: 7.5px; */
 }
 
 .hamburger-menu-wrapper {
