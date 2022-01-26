@@ -19,7 +19,9 @@
     </div>
     <main>
       <div class="form-header">
-        <h4><i class="fab fa-telegram-plane pe-3"></i>Contact Us</h4>
+        <h4 @click="test">
+          <i class="fab fa-telegram-plane pe-3"></i>Contact Us
+        </h4>
         <p>
           We understand the importance of approaching each work integrally and
           believe in the power of simple and easy communication. Feel free to
@@ -67,6 +69,8 @@
 </template>
 
 <script>
+// import $ from "jquery";
+
 export default {
   name: "Contact",
 };
@@ -214,7 +218,7 @@ textarea {
   font-size: var(--font-14);
   font-weight: var(--weight-700);
   padding: 10px;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   transition: 0.5s;
 }
 

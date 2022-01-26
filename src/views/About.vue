@@ -97,14 +97,14 @@ export default {
 }
 
 .iframe-wrapper iframe {
-    width: 75%;
-    height: 550px;
-    margin: auto;
+  width: 75%;
+  height: 550px;
+  margin: auto;
 }
 
 .values-container {
-    width: 75%;
-    margin: auto;
+  width: 75%;
+  margin: auto;
 }
 
 .values-container h5 {
@@ -117,13 +117,12 @@ export default {
 }
 
 .values-container p {
-    text-align: start;
-    width: 100%;
-    margin-bottom: 1em;
+  text-align: start;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 /* .values-container p:last-of-type {
     padding-bottom: 3em;
 } */
-
 </style>
