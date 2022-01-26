@@ -317,7 +317,7 @@ button {
   right: 0;
   left: 0;
   z-index: 333;
-  /* display: none; */
+  display: none;
 }
 
 .parent-bg .close-sign {
@@ -333,7 +333,7 @@ button {
   margin-top: 89px;
   border-radius: 3px;
   position: relative;
-  /* top: -1000px; */
+  top: -1000px;
 }
 
 .parent-bg .wrapper {
