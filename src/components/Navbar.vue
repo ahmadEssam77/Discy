@@ -1,109 +1,125 @@
 <template>
-  <div class="nav-wrapper">
-    <div class="container d-flex">
-      <div class="logo">
-        <img src="../assets/images/logo.png" alt="" />
-      </div>
-      <div class="nav d-flex align-items-center justify-content-between">
-        <ul class="d-flex list-unstyled">
-          <li class="home">
-            <router-link
-              to="/"
-              :class="{ active: checkLi == 1 }"
-              @click="activeNavbar(1)"
-              >Home</router-link
-            >
-          </li>
-          <li class="about">
-            <router-link
-              to="about"
-              :class="{ active: checkLi == 2 }"
-              @click="activeNavbar(2)"
-              >About Us</router-link
-            >
-          </li>
-          <li class="blog">
-            <router-link
-              to=""
-              :class="{ active: checkLi == 3 }"
-              @click="activeNavbar(3)"
-              >Blog</router-link
-            >
-          </li>
-          <li class="contact">
-            <router-link
-              to="contact"
-              :class="{ active: checkLi == 4 }"
-              @click="activeNavbar(4)"
-              >Contact Us</router-link
-            >
-          </li>
-        </ul>
-        <div class="search position-relative">
-          <input
-            type="search"
-            class="search"
-            name=""
-            id=""
-            placeholder="Type Search Words"
-          />
-          <i class="fas fa-search icon-search"></i>
+  <div>
+    <div class="nav-wrapper">
+      <div class="container d-flex">
+        <div class="logo">
+          <router-link to="/">
+            <img src="../assets/images/logo.png" alt="Discy-Logo" />
+          </router-link>
+        </div>
+        <div class="nav d-flex align-items-center justify-content-between">
+          <ul class="d-flex list-unstyled">
+            <li class="home">
+              <router-link
+                to="/"
+                :class="{ active: checkLi == 1 }"
+                @click="activeNavbar(1)"
+                >Home</router-link
+              >
+            </li>
+            <li class="about">
+              <router-link
+                to="about"
+                :class="{ active: checkLi == 2 }"
+                @click="activeNavbar(2)"
+                >About Us</router-link
+              >
+            </li>
+            <li class="blog">
+              <router-link
+                to=""
+                :class="{ active: checkLi == 3 }"
+                @click="activeNavbar(3)"
+                >Blog</router-link
+              >
+            </li>
+            <li class="contact">
+              <router-link
+                to="contact"
+                :class="{ active: checkLi == 4 }"
+                @click="activeNavbar(4)"
+                >Contact Us</router-link
+              >
+            </li>
+          </ul>
+          <div class="search position-relative">
+            <input
+              type="search"
+              name=""
+              id=""
+              placeholder="Type Search Words"
+            />
+            <i class="fas fa-search icon-search"></i>
+          </div>
+        </div>
+        <div class="login">
+          <button class="sign-in" @click="clickSignIn">Sign In</button>
+          <button class="sign-up">Sign Up</button>
         </div>
       </div>
-      <div class="login">
-        <button class="sign-in" @click="clickSignIn">Sign In</button>
-        <button class="sign-up">Sign Up</button>
+      <!-- Sign in pop-up -->
+      <div class="parent-bg" @click="close">
+        <div class="first-wrapper" @click="stopPro($event)">
+          <i @click="close" class="fas fa-times close-sign"></i>
+          <div class="wrapper">
+            <div class="sign-in-left">
+              <div class="inner">
+                <h2>Sign In</h2>
+                <p>
+                  Login to our social questions & Answers Engine to ask
+                  questions answer people’s questions & connect with other
+                  people.
+                </p>
+                <button>Sign Up Here</button>
+              </div>
+            </div>
+            <div class="login-right">
+              <div class="inner">
+                <div class="input-wrapper">
+                  <label for=""
+                    >Username or email <span class="asstrict">*</span></label
+                  >
+                  <input type="text" name="" id="" />
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="input-wrapper">
+                  <label for="">Password <span class="asstrict">*</span></label>
+                  <input type="password" name="" id="" />
+                  <i class="fas fa-unlock"></i>
+                </div>
+                <div class="reminder-wrapper">
+                  <div>
+                    <!-- <input type="checkbox" class="checkbox" name="" id="" checked /> -->
+                    <div class="checkbox"></div>
+                    <label for="">Remember Me!</label>
+                  </div>
+                  <div>
+                    <a href="">Forget password?</a>
+                  </div>
+                </div>
+                <button>Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="lock">
-        <i class="fas fa-lock"></i>
-      </div>
-    </div>
-    <div class="hamburger-menu-wrapper">
-      <div class="hamburger-menu"></div>
     </div>
 
-    <!-- Sign in -->
-    <div class="parent-bg">
-      <i @click="close" class="fas fa-times close-sign"></i>
-      <div class="first-wrapper">
-        <div class="wrapper">
-          <div class="sign-in-left">
-            <div class="inner">
-              <h2>Sign In</h2>
-              <p>
-                Login to our social questions & Answers Engine to ask questions
-                answer people’s questions & connect with other people.
-              </p>
-              <button>Sign Up Here</button>
-            </div>
-          </div>
-          <div class="login-right">
-            <div class="inner">
-              <div class="input-wrapper">
-                <label for=""
-                  >Username or email <span class="asstrict">*</span></label
-                >
-                <input type="text" name="" id="" />
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="input-wrapper">
-                <label for="">Password <span class="asstrict">*</span></label>
-                <input type="password" name="" id="" />
-                <i class="fas fa-unlock"></i>
-              </div>
-              <div class="reminder-wrapper">
-                <div>
-                  <input type="checkbox" class="checkbox" name="" id="" />
-                  <label for="">Remember Me!</label>
-                </div>
-                <div>
-                  <a href="">Forget password?</a>
-                </div>
-              </div>
-              <button>Login</button>
-            </div>
-          </div>
-        </div>
+    <!-- Nav bar for Mobile || Media query -->
+    <div class="nav-wrapper-mobile">
+      <!-- Hamburger Menu -->
+      <div class="hamburger-menu-wrapper">
+        <div class="hamburger-menu"></div>
+      </div>
+      <!-- Logo -->
+      <div class="logo-mobile">
+        <router-link to="/">
+          <img src="../assets/images/logo.png" alt="Discy-Logo" />
+        </router-link>
+      </div>
+      <!-- Lock -->
+      <div class="lock">
+        <i class="fas fa-lock"></i>
       </div>
     </div>
   </div>
@@ -127,6 +143,9 @@ export default {
       $(".parent-bg").fadeOut(400, function () {
         $(".first-wrapper").animate({ top: "-1000px" });
       });
+    },
+    stopPro(e) {
+      e.stopPropagation();
     },
     clickSignIn() {
       $(".parent-bg").fadeIn(0, function () {
@@ -154,107 +173,60 @@ export default {
   border-right: 1px solid #33353c;
 }
 
-ul {
-  padding-top: 17px;
+.nav ul {
+  padding-top: 14px;
+  padding-left: 20px;
 }
 
-a {
+.nav ul li {
+  padding-right: 12px;
+}
+
+/* Router-Link */
+.nav a {
   color: var(--white-text);
   text-decoration: none;
-  /* padding-top: 5.5px;
-  padding-bottom: 8.5px;
-  padding-left: 7.5px;
-  padding-right: 7.5px; */
-}
-
-.hamburger-menu-wrapper {
-  display: none;
-}
-
-.hamburger-menu {
-  height: 2.5px;
-  border-radius: 2px;
-  width: 13px;
-  background-color: var(--white-text);
-  position: relative;
-}
-
-.hamburger-menu:after {
-  content: "";
-  position: absolute;
-  width: 13px;
-  background-color: var(--white-text);
-  border-radius: 2px;
-  height: 2.5px;
-  top: 3px;
-}
-
-.hamburger-menu:before {
-  content: "";
-  position: absolute;
-  width: 13px;
-  background-color: var(--white-text);
-  border-radius: 2px;
-  height: 2.5px;
-  bottom: 3px;
-}
-
-.home {
-  padding-left: 20px;
-  padding-right: 19px;
-  font-weight: 700;
-  font-size: 14px;
-  font-family: var(--roboto-font-family);
-}
-
-.about,
-.blog {
-  padding-right: 25px;
-  font-weight: 700;
-  font-size: 14px;
-  font-family: var(--roboto-font-family);
-}
-
-.contact {
-  font-weight: 700;
-  font-size: 14px;
-  font-family: var(--roboto-font-family);
-}
-
-.active {
-  background-color: var(--footer-bg);
   padding-top: 5.5px;
   padding-bottom: 8.5px;
   padding-left: 7.5px;
   padding-right: 7.5px;
+  font-size: var(--font-14);
+  font-weight: var(--weight-700);
+  font-family: var(--roboto-font-family);
+}
+
+.active,
+.nav a:hover {
+  background-color: var(--footer-bg);
   border-radius: 2px;
 }
 
-input {
+.search input {
   background-color: #202228;
   padding: 6px 5px 6px 10px;
   outline: none;
   border: none;
   border-radius: 3px;
   width: 230px;
-  font-size: 12px;
+  font-size: var(--font-12);
   margin-right: 17px;
 }
 
-input::placeholder {
+.search input::placeholder {
   font-size: 12px;
   font-family: var(--arial-font-family);
   font-style: italic;
-  font-weight: 400;
-  color: #7c7f85;
+  font-weight: var(--weight-400);
+  color: var(--btn-bg-gray);
+  opacity: 0.95;
 }
 
-input:focus {
-  color: #7c7f85;
+.search input:focus {
+  color: var(--btn-bg-gray);
 }
 
 /* Search icon */
-i {
+.search i {
   position: absolute;
   color: var(--white-text);
   right: 28px;
@@ -267,11 +239,12 @@ i {
   border-right: 1px solid #33353c;
   padding-top: 25px;
   padding-bottom: 28px;
+  padding-left: 21px;
 }
 
-button {
+.login button {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: var(--weight-700);
   font-family: var(--roboto-font-family);
   color: var(--white-text);
   width: 103px;
@@ -279,23 +252,21 @@ button {
   padding-bottom: 5px;
 }
 
-.sign-in {
+.login .sign-in {
   background-color: var(--main-blue-bg-text-color);
   border-radius: 2px;
   border: none;
-  margin-left: 21px;
   margin-right: 20px;
   transition: 0.5s;
   letter-spacing: 0.8px;
 }
 
-.sign-in:hover,
-.sign-up:hover {
+.login .sign-in:hover,
+.login .sign-up:hover {
   background-color: var(--widget-red-color);
 }
 
-.sign-up {
-  margin-right: 21px;
+.login .sign-up {
   border-radius: 2px;
   border: none;
   background-color: var(--btn-bg-gray);
@@ -303,12 +274,40 @@ button {
   letter-spacing: 0.8px;
 }
 
-/* Lock sign-in-up div */
-.lock {
+.nav-wrapper-mobile {
   display: none;
 }
 
-/* Sign in */
+/* Mobile Screen */
+.hamburger-menu {
+  height: 4px;
+  border-radius: 2px;
+  width: 22px;
+  background-color: var(--white-text);
+  position: relative;
+}
+
+.hamburger-menu:after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  background-color: var(--white-text);
+  border-radius: 2px;
+  height: 4px;
+  top: 5.5px;
+}
+
+.hamburger-menu:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  background-color: var(--white-text);
+  border-radius: 2px;
+  height: 4px;
+  bottom: 5px;
+}
+
+/* Sign in Popup-Animation */
 .parent-bg {
   background-color: rgba(39, 41, 48, 0.95);
   position: fixed;
@@ -321,19 +320,21 @@ button {
 }
 
 .parent-bg .close-sign {
-  right: 24.7%;
-  top: 8%;
   font-size: 18px;
+  color: #fff;
   cursor: pointer;
+  display: flex;
+  justify-content: end;
+  padding-bottom: 15px;
 }
 
 .parent-bg .first-wrapper {
   width: 50.6%;
-  margin: auto;
-  margin-top: 89px;
+  margin: 0 auto;
   border-radius: 3px;
   position: relative;
-  top: -1000px;
+  top: -500px;
+  padding-top: 55px;
 }
 
 .parent-bg .wrapper {
@@ -365,8 +366,12 @@ button {
   border-bottom-right-radius: 3px;
 }
 
-.parent-bg .inner {
+.parent-bg .sign-in-left .inner {
   padding: 60px;
+}
+
+.parent-bg .login-right .inner {
+  padding: 55px 60px;
 }
 
 .parent-bg h2 {
@@ -382,11 +387,12 @@ button {
   font-size: var(--font-14);
   font-family: var(--roboto-font-family);
   font-weight: var(--weight-400);
-  margin-bottom: 75px;
+  margin-bottom: 90px;
   line-height: 1.7;
 }
 
-.parent-bg .sign-in-left button {
+.parent-bg .sign-in-left button,
+.parent-bg .login-right button {
   background-color: var(--navbar-bg);
   width: 100%;
   border: none;
@@ -395,11 +401,27 @@ button {
   font-family: var(--roboto-font-family);
   letter-spacing: 0.8px;
   font-size: var(--font-14);
+  transition: 0.5s;
   font-weight: var(--weight-700);
+  color: var(--white-text);
+}
+
+.parent-bg .login-right button {
+  margin-top: 11px;
+  background-color: var(--main-blue-bg-text-color);
+  color: var(--white-text);
+}
+
+.parent-bg .sign-in-left button:hover {
+  background-color: var(--main-blue-bg-text-color);
+}
+
+.parent-bg .login-right button:hover {
+  background-color: var(--footer-text-color);
 }
 
 .parent-bg .input-wrapper {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -409,6 +431,7 @@ button {
   top: 70%;
   transform: translateY(-50%);
   font-size: 13px;
+  position: absolute;
 }
 
 .parent-bg .input-wrapper label,
@@ -419,11 +442,37 @@ button {
   font-weight: var(--weight-400);
 }
 
+.parent-bg .reminder-wrapper .checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+
+.parent-bg .reminder-wrapper .checkbox::before {
+  content: "\2713";
+  font-size: 14px;
+  height: 17px;
+  display: block;
+  position: absolute;
+  top: -3px;
+  right: 2px;
+  text-align: center;
+  font-family: var(--roboto-font-family);
+  font-weight: var(--weight-700);
+}
+
 .parent-bg .reminder-wrapper a {
   font-family: var(--arial-font-family);
   font-size: var(--font-12);
   font-weight: var(--weight-400);
   color: var(--navbar-bg);
+  text-decoration: none;
   transition: 0.5s;
 }
 
@@ -436,31 +485,15 @@ button {
   border: 1px solid var(--separator-color);
   border-radius: 2px;
   padding-left: 28px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   width: 100%;
 }
 
 .parent-bg .reminder-wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-.parent-bg .reminder-wrapper .checkbox {
-  width: 15px;
-}
-
-.parent-bg .login-right button {
-  background-color: var(--main-blue-bg-text-color);
-  width: 100%;
-  border: none;
-  border-radius: 3px;
-  padding: 10px;
-  font-family: var(--roboto-font-family);
-  letter-spacing: 0.8px;
-  font-size: var(--font-14);
-  font-weight: var(--weight-700);
-  margin-top: 11px;
+  margin-bottom: 15px;
 }
 
 .parent-bg .asstrict {
@@ -470,7 +503,8 @@ button {
 /* Media Query */
 @media screen and (max-width: 800px) {
   .nav-wrapper {
-    height: 84px !important;
+    /* height: 84px !important; */
+    display: none;
   }
 
   .nav {
@@ -479,54 +513,38 @@ button {
     display: none !important;
   }
 
-  .hamburger-menu-wrapper {
-    display: inline-block;
-    position: relative;
-    top: -41px;
-    left: 20px;
-    cursor: pointer;
-
+  .nav-wrapper-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
     background-color: var(--navbar-bg);
-    line-height: 18px;
+    padding-right: 20px;
+  }
+
+  .lock i {
+    color: var(--white-text);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .lock i:hover {
+    color: var(--main-blue-bg-text-color);
+  }
+
+  .hamburger-menu-wrapper {
+    cursor: pointer;
+    background-color: var(--navbar-bg);
     font-weight: 700;
     letter-spacing: 0.8px;
-    padding: 12px 9px 15px;
+    padding: 17px 10px;
     border-radius: 2px;
     transition: 0.5s;
   }
 
   .hamburger-menu-wrapper:hover {
     background-color: var(--footer-bg);
-  }
-
-  .login {
-    display: none !important;
-  }
-
-  .lock {
-    display: block !important;
-    position: absolute;
-    right: -2%;
-    top: 22px;
-  }
-
-  .lock i {
-    font-size: 20px;
-  }
-
-  .lock i:hover {
-    color: var(--main-blue-bg-text-color);
-    transition: 0.5s;
-    cursor: pointer;
-  }
-
-  .logo {
-    position: relative;
-    left: 35%;
-    bottom: 0px;
-    padding-top: 20px;
-    cursor: pointer;
-    width: fit-content;
   }
 }
 </style>
