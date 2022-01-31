@@ -79,17 +79,17 @@
                   <label for=""
                     >Username or email <span class="asstrict">*</span></label
                   >
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" />
                   <i class="fas fa-user"></i>
                 </div>
                 <div class="input-wrapper">
                   <label for="">Password <span class="asstrict">*</span></label>
-                  <input type="password" name="" id="" />
+                  <input type="password" name="" />
                   <i class="fas fa-unlock"></i>
                 </div>
                 <div class="reminder-wrapper">
                   <div>
-                    <!-- <input type="checkbox" class="checkbox" name="" id="" checked /> -->
+                    <!-- <input type="checkbox" class="checkbox" name="" checked /> -->
                     <div class="checkbox"></div>
                     <label for="">Remember Me!</label>
                   </div>
@@ -124,29 +124,36 @@
               <div class="inner">
                 <div class="input-wrapper">
                   <label for="">Username<span class="asstrict">*</span></label>
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" />
                   <i class="fas fa-user"></i>
                 </div>
                 <div class="input-wrapper">
                   <label for="">Email <span class="asstrict">*</span></label>
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" />
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div class="input-wrapper">
                   <label for="">Password <span class="asstrict">*</span></label>
-                  <input type="password" name="" id="" />
+                  <input type="password" name="" />
                   <i class="fas fa-unlock"></i>
                 </div>
                 <div class="input-wrapper">
-                  <label for="">Confirm Password <span class="asstrict">*</span></label>
-                  <input type="password" name="" id="" />
+                  <label for=""
+                    >Confirm Password <span class="asstrict">*</span></label
+                  >
+                  <input type="password" name="" />
                   <i class="fas fa-lock"></i>
                 </div>
                 <div class="reminder-wrapper">
                   <div>
-                    <!-- <input type="checkbox" class="checkbox" name="" id="" checked /> -->
+                    <!-- <input type="checkbox" class="checkbox" name="" checked /> -->
                     <div class="checkbox"></div>
-                    <label for="">By registering, you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy .</a> <span class="asstrict">*</span></label>
+                    <label for=""
+                      >By registering, you agree to the
+                      <a href="#">Terms of Service</a> and
+                      <a href="#">Privacy Policy .</a>
+                      <span class="asstrict">*</span></label
+                    >
                   </div>
                 </div>
                 <button>Signup</button>

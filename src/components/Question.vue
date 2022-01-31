@@ -33,19 +33,11 @@
             <button class="form-control">View Profile</button>
           </div>
         </div>
+        <!-- Vote -->
         <div class="vote position-relative">
           <div class="arrow-up" @click="addCounter()"></div>
           <div class="vote-counter">{{ count }}</div>
           <div class="arrow-down" @click="decreaseCounter()"></div>
-          <!-- <div>
-            <span @click="addCounter"><i class="fas fa-sort-up"></i></span>
-            <p class="mb-0 counter-wrapper">
-              <input type="text" name="" v-model="counter" id="" readonly />
-            </p>
-            <span @click="decreaseCounter"
-              ><i class="fas fa-sort-down"></i
-            ></span>
-          </div> -->
         </div>
       </div>
       <div class="the-main-question">
