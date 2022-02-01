@@ -124,6 +124,7 @@ button:hover {
     flex-direction: column;
     align-items: start !important;
     padding-left: 10px;
+    padding-right: 10px;
   }
 
   .left,

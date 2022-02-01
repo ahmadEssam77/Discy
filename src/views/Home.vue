@@ -25,11 +25,11 @@
   </div>
   <!-- Question component -->
   <Question />
-  <!-- <Question />
   <Question />
   <Question />
   <Question />
-  <Question /> -->
+  <Question />
+  <Question />
   <!-- Load more question -->
   <div class="load-more">
     <button class="form-control">Load More Questions</button>

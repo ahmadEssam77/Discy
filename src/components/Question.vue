@@ -83,6 +83,64 @@
         </div>
       </div>
     </div>
+
+    <!-- Question Mobile -->
+    <div class="question-mobile">
+      <div class="wrap-img-counter-more">
+        <div class="for-image">
+          <img src="../assets/images/userImg.jpg" alt="" />
+        </div>
+        <div class="for-counter">
+          <!-- Vote -->
+          <div class="vote vote-2 position-relative">
+            <div class="arrow-up" @click="addCounter()"></div>
+            <div class="vote-counter">{{ count }}</div>
+            <div class="arrow-down" @click="decreaseCounter()"></div>
+          </div>
+        </div>
+        <div class="for-more">
+          <div>
+            <h4>Martin Hope</h4>
+            <span class="tag tag-2">Enlightened</span>
+            <p>
+              <span class="asked">Asked:</span>
+              <span class="date">April 19, 2018</span>
+            </p>
+            <p>
+              <span class="in">In:</span> <span class="lang">Language</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="user-asked-mobile">
+        <h5>
+          Is this statement, “i see him last night” can be understood as “I saw
+          him last night”?
+        </h5>
+        <p>
+          In my local language (Bahasa Indonesia) there are no verb-2 or past
+          tense form as time tracker. So, I often forget to use the past form of
+          verb when speaking english. I saw him last night (correct) I see him
+          last night ...
+        </p>
+        <div class="tags tags-mobile">
+          <span>english</span>
+          <span>language</span>
+        </div>
+        <div class="q-view-answer-mobile">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span
+                ><i class="fas fa-comment-alt fa-flip-horizontal"></i> 3
+                Answers</span
+              >
+              <span class="views"><i class="fas fa-eye"></i> 10K Views</span>
+            </div>
+            <div><button class="">Answer</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -137,7 +195,8 @@ export default {
   margin-bottom: 4px;
 }
 
-.name {
+.name,
+.for-more h4 {
   font-size: 14px;
   color: var(--main-blue-bg-text-color);
   letter-spacing: 0.8px;
@@ -148,7 +207,16 @@ export default {
   cursor: pointer;
 }
 
-.name:hover {
+.for-more h4 {
+  display: inline-block;
+}
+
+.for-more p {
+  margin: 0px;
+}
+
+.name:hover,
+.for-more h4:hover {
   color: var(--navbar-bg);
 }
 
@@ -164,8 +232,14 @@ export default {
   text-transform: capitalize;
 }
 
+.tag-2 {
+  padding: 2px 4px 4px;
+}
+
 .question-date span,
-.language span {
+.language span,
+.for-more .asked,
+.for-more .in {
   color: var(--btn-bg-gray);
   font-size: 11px;
   font-weight: 400;
@@ -175,7 +249,9 @@ export default {
 }
 
 .question-date .date,
-.language .lang {
+.language .lang,
+.for-more .date,
+.for-more .lang {
   color: var(--main-blue-bg-text-color);
   cursor: pointer;
   font-size: 11px;
@@ -185,12 +261,21 @@ export default {
   transition: 0.5s;
 }
 
+.for-more .date,
+.for-more .lang {
+  position: relative;
+  bottom: 2px;
+}
+
 .question-date .date:hover,
-.language .lang:hover {
+.language .lang:hover,
+.for-more .date:hover,
+.for-more .lang:hover {
   color: var(--navbar-bg);
 }
 
-.user-asked h5 {
+.user-asked h5,
+.user-asked-mobile h5 {
   transition: 1s;
   font-size: 19px;
   font-weight: 700;
@@ -201,11 +286,17 @@ export default {
   cursor: pointer;
 }
 
-.user-asked h5:hover {
+.user-asked-mobile h5 {
+  padding-top: 8px;
+}
+
+.user-asked h5:hover,
+.user-asked-mobile h5:hover {
   color: var(--main-blue-bg-text-color);
 }
 
-.user-description p {
+.user-description p,
+.user-asked-mobile p {
   margin-bottom: 17.5px;
   font-size: 15px;
   line-height: 30px;
@@ -218,17 +309,26 @@ export default {
   margin-bottom: 30px;
 }
 
-.q-view-answer {
+.tags-mobile {
+  margin-bottom: 5px;
+}
+
+.q-view-answer, .q-view-answer-mobile {
   padding: 15px;
   border-radius: 2px;
   background-color: var(--footer-bg-question);
 }
 
+.q-view-answer-mobile {
+  margin-top: 15px;
+}
+
 .tags span,
-.q-view-answer span {
+.q-view-answer span,
+.q-view-answer-mobile span {
   border: 1px solid var(--separator-color);
   background-color: var(--white-text);
-  padding: 3px 5px 4px;
+  padding: 5px 6px 5px;
   margin-right: 7px;
   font-family: var(--arial-font-family);
   font-size: 11px;
@@ -239,19 +339,19 @@ export default {
   transition: 0.5s;
 }
 
-.q-view-answer span {
+.q-view-answer span, .q-view-answer-mobile span {
   padding: 8px 10px;
 }
 
-.q-view-answer i {
+.q-view-answer i, .q-view-answer-mobile {
   margin-right: 12px;
 }
 
-.q-view-answer .views {
+.q-view-answer .views, .q-view-answer-mobile .views {
   cursor: text;
 }
 
-.q-view-answer button {
+.q-view-answer button, .q-view-answer-mobile button {
   background-color: var(--navbar-bg);
   border-radius: 2px;
   font-family: var(--arial-font-family);
@@ -264,7 +364,8 @@ export default {
   transition: 0.5s;
 }
 
-.q-view-answer button:hover {
+.q-view-answer button:hover,
+.q-view-answer-mobile button:hover {
   background-color: var(--main-blue-bg-text-color);
 }
 
@@ -353,7 +454,7 @@ export default {
   border-right: 6px solid transparent;
   cursor: pointer;
   position: absolute;
-  top: 54px;
+  top: 48px;
   left: 17px;
 
   border-bottom: 9px solid #677075;
@@ -365,7 +466,7 @@ export default {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   position: absolute;
-  top: 104px;
+  top: 110px;
   left: 17px;
   cursor: pointer;
 
@@ -382,9 +483,44 @@ export default {
   font-weight: 700;
 }
 
+/* Question mobile */
+
+.question-mobile {
+  display: none;
+}
+
+.vote-2 {
+  bottom: 51px;
+  left: 12px;
+}
+
+.wrap-img-counter-more {
+  display: flex;
+}
+
+.wrap-img-counter-more img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--main-blue-bg-text-color);
+  padding: 3px;
+  cursor: pointer;
+}
+
+.for-more {
+  margin-left: 70px;
+}
+
 @media screen and (max-width: 768px) {
+  .social-question {
+    padding: 15px;
+  }
+
   .question-web {
     display: none !important;
-  }  
+  }
+
+  .question-mobile {
+    display: block;
+  }
 }
 </style>
