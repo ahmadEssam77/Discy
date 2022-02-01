@@ -1,31 +1,35 @@
 <template>
-  <div class="add-search d-flex align-items-center justify-content-between">
-    <div class="left-search">
-      <a href="#"><i class="fas fa-search icon-search"></i> Search</a>
-    </div>
-    <div class="right-question">
-      <a href="#"><i class="fas fa-question-circle"></i> Ask A Question</a>
-    </div>
-  </div>
-  <div class="create-account">
-    <div
-      class="container d-flex justify-content-between align-items-center change-dir"
-    >
-      <div class="left w-50">
-        <h3 class="">Share & grow the world's knowledge!</h3>
-        <p>
-          We want to connect the people who have knowledge to the people who
-          need it, to bring together people with different perspectives so they
-          can understand each other better, and to empower everyone to share
-          their knowledge.
-        </p>
+  <div>
+    <div class="add-search d-flex align-items-center justify-content-between">
+      <div class="left-search">
+        <a href="#"><i class="fas fa-search icon-search"></i> Search</a>
       </div>
-      <div class="right">
-        <button @click="clickSignUp">Create A New Account</button>
+      <div class="right-question">
+        <a href="#"><i class="fas fa-question-circle"></i> Ask A Question</a>
       </div>
     </div>
+    <div class="create-account">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center change-dir"
+        >
+          <div class="left">
+            <h3 class="">Share & grow the world's knowledge!</h3>
+            <p>
+              We want to connect the people who have knowledge to the people who
+              need it, to bring together people with different perspectives so
+              they can understand each other better, and to empower everyone to
+              share their knowledge.
+            </p>
+          </div>
+          <div class="right">
+            <button @click="clickSignUp">Create A New Account</button>
+          </div>
+        </div>
+      </div>
 
-    <!-- No Parent bg 2 pop up I wrote it only once in Navbar -->
+      <!-- No Parent bg 2 pop up I wrote it only once in Navbar -->
+    </div>
   </div>
 </template>
 
@@ -48,7 +52,7 @@ export default {
     stopPro(e) {
       e.stopPropagation();
     },
-  }
+  },
 };
 </script>
 
@@ -63,6 +67,10 @@ export default {
 .left,
 .right {
   font-family: var(--roboto-font-family);
+}
+
+.left {
+  width: 50%;
 }
 
 .right {
@@ -86,7 +94,6 @@ p {
 
 button {
   border-radius: 2px;
-  /* margin-right: 20px; */
   padding: 8px 40px;
   color: var(--white-text);
   border: none;
@@ -105,5 +112,61 @@ button:hover {
 
 .add-search {
   display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .create-account {
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .change-dir {
+    flex-direction: column;
+    align-items: start !important;
+    padding-left: 10px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .right {
+    margin-bottom: 18px;
+  }
+
+  .add-search {
+    display: flex !important;
+    background-color: var(--questions-bg-widget);
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-bottom: 0;
+    padding: 17px 10px;
+  }
+
+  .add-search a {
+    font-size: 14px;
+    font-family: var(--roboto-font-family);
+    color: var(--navbar-bg);
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  .add-search a:hover {
+    color: var(--main-blue-bg-text-color); 
+  }
+
+  .left-search i {
+    font-size: 11px;
+    margin-right: 2px;
+  }
+  .right-question i {
+    font-size: 13px;
+  }
+
+  h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
 }
 </style>

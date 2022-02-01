@@ -1,6 +1,6 @@
 <template>
   <div class="social-question">
-    <div class="d-flex">
+    <div class="d-flex question-web">
       <div class="img-counter">
         <div
           class="user-img d-flex align-items-center justify-content-center position-relative"
@@ -380,5 +380,11 @@ export default {
   font-family: var(--roboto-font-family);
   font-size: 20px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .question-web {
+    display: none !important;
+  }  
 }
 </style>

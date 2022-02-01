@@ -9,32 +9,32 @@
         <i @click="closeSignUp" class="fas fa-times close-sign"></i>
         <div class="wrapper">
           <div class="login-right">
-              <div class="inner">
-                <div class="input-wrapper">
-                  <label for=""
-                    >Username or email <span class="asstrict">*</span></label
-                  >
-                  <input type="text" name="" />
-                  <i class="fas fa-user"></i>
-                </div>
-                <div class="input-wrapper">
-                  <label for="">Password <span class="asstrict">*</span></label>
-                  <input type="password" name="" />
-                  <i class="fas fa-unlock"></i>
-                </div>
-                <div class="reminder-wrapper">
-                  <div>
-                    <!-- <input type="checkbox" class="checkbox" name="" checked /> -->
-                    <div class="checkbox"></div>
-                    <label for="">Remember Me!</label>
-                  </div>
-                  <div>
-                    <a href="">Forget password?</a>
-                  </div>
-                </div>
-                <button>Login</button>
+            <div class="inner">
+              <div class="input-wrapper">
+                <label for=""
+                  >Username or email <span class="asstrict">*</span></label
+                >
+                <input type="text" name="" />
+                <i class="fas fa-user"></i>
               </div>
+              <div class="input-wrapper">
+                <label for="">Password <span class="asstrict">*</span></label>
+                <input type="password" name="" />
+                <i class="fas fa-unlock"></i>
+              </div>
+              <div class="reminder-wrapper">
+                <div>
+                  <!-- <input type="checkbox" class="checkbox" name="" checked /> -->
+                  <div class="checkbox"></div>
+                  <label for="">Remember Me!</label>
+                </div>
+                <div>
+                  <a href="">Forget password?</a>
+                </div>
+              </div>
+              <button>Login</button>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -134,5 +134,4 @@ button:hover {
   top: -500px;
   padding-top: 55px;
 }
-
 </style>

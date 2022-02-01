@@ -225,7 +225,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped >
 /* Nav */
 .nav-wrapper {
   background-color: var(--navbar-bg);
