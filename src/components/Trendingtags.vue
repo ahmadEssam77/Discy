@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-trending-tags">
     <section class="position-relative">
       <div class="row p-2">
         <h2 class="">
@@ -38,8 +38,11 @@ export default {};
 </script>
 
 <style scoped>
-div {
+.main-trending-tags {
   padding: 10px !important;
+  padding-right: 17px !important;
+  padding-bottom: 25px !important;
+  background-color: var(--white-text);
 }
 
 h2 {
@@ -69,5 +72,17 @@ h2 {
   background-color: var(--main-blue-bg-text-color);
   color: var(--white-text);
   border-color: var(--main-blue-bg-text-color);
+}
+
+@media screen and (max-width: 800px) {
+  .main-trending-tags {
+    background-color: var(--white-text);
+    padding-top: 0px !important;
+  }
+
+  .main-trending-tags {
+    padding-right: 10px !important;
+    padding-bottom: 10px !important;
+  }
 }
 </style>

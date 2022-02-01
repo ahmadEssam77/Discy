@@ -118,7 +118,7 @@ export default {
 .answers::after {
   content: "";
   position: absolute;
-  width: 1px;
+  width: 1.5px;
   height: 45px;
   background-color: var(--widget-red-color);
   right: 1px;
@@ -146,7 +146,7 @@ export default {
 .users::after {
   content: "";
   position: absolute;
-  width: 1px;
+  width: 1.5px;
   height: 45px;
   background-color: var(--main-blue-bg-text-color);
   right: 1px;
@@ -158,7 +158,6 @@ h3 {
   font-family: var(--roboto-font-family);
   font-weight: 700;
 }
-
 /* End insights */
 
 /* Section buttons */
@@ -255,5 +254,11 @@ h3 {
 
 .for-question i {
   padding-left: 12px;
+}
+
+@media screen and (max-width: 800px) {
+  .parent {
+    background-color: var(--white-text);
+  }
 }
 </style>

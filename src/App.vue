@@ -79,7 +79,7 @@ body {
     flex-direction: column;
   }
 
-  .design-middle {
+  .design-middle, .design-right {
     width: 100%;
   }
 }

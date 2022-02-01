@@ -43,6 +43,12 @@ export default {
 </script>
 
 <style scoped>
+.topmembers {
+  background-color: var(--white-text);
+  padding: 20px 20px 30px 18px;
+  border-bottom: 2px solid var(--separator-color);
+}
+
 h3,
 h4 {
   color: var(--ancor-color);

@@ -107,13 +107,8 @@ button:hover {
   background-color: var(--btn-bg-gray);
 }
 
-/* Media query */
-@media screen and (max-width: 800px) {
-  div {
-    display: none;
-  }
-}
 
+/* PopUp */
 .parent-bg-3 {
   background-color: rgba(39, 41, 48, 0.95);
   position: fixed;

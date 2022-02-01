@@ -182,5 +182,10 @@ a:hover {
     border-color: var(--bottom-separator-color);
     font-family: var(--arial-font-family);
   }
+
+  .load-more {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--separator-color);
+  }
 }
 </style>
