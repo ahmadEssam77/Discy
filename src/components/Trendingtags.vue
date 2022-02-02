@@ -1,7 +1,7 @@
 <template>
   <div class="main-trending-tags">
     <section class="position-relative">
-      <div class="row p-2">
+      <div class="row p-2 g-0">
         <h2 class="">
           <i class="fas fa-tag fa-flip-horizontal ps-3"></i> Trending Tags
         </h2>

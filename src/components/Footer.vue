@@ -1,7 +1,7 @@
 <template>
   <footer class="py-4 position-relative">
     <div class="container pt-2">
-      <div class="row py-5 for-the-row g-0">
+      <div class="row py-5 g-0 for-the-row">
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex">
             <div class="logo">
@@ -191,12 +191,21 @@ footer li:hover {
     left: 0;
   }
 
-  .for-the-row {
-    padding: 0px !important;
-    margin: 0px !important;
+  h6 {
+    padding-bottom: 3px;
   }
 
+  .icon-wrapper {
+    margin-top: 13px;
+  }
 
+  .logo-footer-content {
+    margin-bottom: 13px;
+  }
+
+  .for-the-row {
+    padding: 0px !important;
+  }
 
 }
 </style>
