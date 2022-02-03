@@ -17,7 +17,9 @@
       </div>
     </div>
   </div>
-  <!-- <Upbutton /> -->
+  <div class="up-button">
+    <Upbutton />
+  </div>
   <!-- Footer -->
   <Footer />
 </template>
@@ -27,8 +29,9 @@ import Createnewaccount from "./components/Createnewaccount.vue";
 import Navbar from "./components/Navbar.vue";
 import Rightside from "./components/Rightside.vue";
 import Leftside from "./components/Leftside.vue";
-// import Upbutton from "./components/Upbutton.vue";
+import Upbutton from "./components/Upbutton.vue";
 import Footer from "./components/Footer.vue";
+// import $ from "jquery";
 
 export default {
   name: "App",
@@ -36,7 +39,7 @@ export default {
     Navbar,
     Rightside,
     Leftside,
-    // Upbutton,
+    Upbutton,
     Createnewaccount,
     Footer,
   },
@@ -79,7 +82,8 @@ body {
     flex-direction: column;
   }
 
-  .design-middle, .design-right {
+  .design-middle,
+  .design-right {
     width: 100%;
   }
 }
